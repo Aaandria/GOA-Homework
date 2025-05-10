@@ -1,15 +1,16 @@
 letter = input()
-if True :
+
+if letter == "A" :
     print(100)
 
-if True :
+if letter == "B" :
     print(80)
 
-if True :
-    print (60)
+if letter == "C" :
+    print(60)
 
-if True :
+if letter == "D" :
     print(40)
 
-if True :
+if letter == "F" :
     print("Failed")

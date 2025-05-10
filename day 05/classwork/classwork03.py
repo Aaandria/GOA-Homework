@@ -1,5 +1,5 @@
 str = input()
-if True :
+if str == "yes" :
     print('name = ' + input())
     print ('surname = ' + input())
 
