@@ -31,11 +31,10 @@ while your_password != password :
 number =int(input("enter a number "))
 starting_number = 1
 sum = 0
-while starting_number < number :
+while starting_number <= number :
+    sum += starting_number
     starting_number += 1
-    sum +=starting_number + 1
 
-print(sum)
-    
-    
+
+print(sum)  
 
