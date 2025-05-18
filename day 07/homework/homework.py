@@ -29,11 +29,13 @@ while your_password != password :
 #   5)მომხმარებელმა უნდა შეიყვანოს რიცხვი n. პროგრამამ while ციკლით უნდა დაითვალოს 1-დან n-მდე რიცხვების ჯამი.
 
 number =int(input("enter a number "))
-starting_number = 0
+starting_number = 1
+sum = 0
 while starting_number < number :
-    starting_number = starting_number + 1
-    sum = starting_number + starting_number + 1
-    print(sum)
+    starting_number += 1
+    sum +=starting_number + 1
+
+print(sum)
     
     
 
