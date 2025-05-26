@@ -1,5 +1,5 @@
-input ()
-print (input)
+a =input ()
+print (a)
 
 10 + 5
 14 + 23
