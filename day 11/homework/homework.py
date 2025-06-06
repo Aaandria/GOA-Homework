@@ -12,9 +12,9 @@ for i in range (n+1) :
 age = int(input("enter your age "))
 students_card = input("do u own a students card, if yes then write True, if not then False ")
 
-if age < 18 or students_card == True :
+if age < 18 or students_card == "True" :
     print("დანაზოგი გაქვს!")
-if age > 60 and students_card == False :
+elif age > 60 and students_card == "False" :
     print("პენსიონერის ფასდაკლება გაქვს!")
 else :
     print("ფასდაკლება არ გეკუთვნის.")
@@ -47,7 +47,7 @@ elif op == "+" :
     print(num1 + num2)
 elif op == "*" :
     print(num1 * num2)
-elif op == "/" :
+elif op == "/" and num2 != 0 :
     print(num1 / num2)
 else :
     print("არასწორი ოპერაცია!")
