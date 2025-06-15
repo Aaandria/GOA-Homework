@@ -28,7 +28,7 @@ else :
     elif weight <= 90 :    print("normal weight")
     else :   print("high weight")
 
-print("3")
+print(3)
 
 age = int(input("enter your age "))
 time = int(input("enter an hour from 0 to 23 "))
@@ -38,4 +38,29 @@ if age < 18 and time >= 22 :
 elif age >= 60 and time >= 21 :
     print("resting is recomended")
 else :
-    print("you can continue wworking")
+    print("you can continue working")
+
+print(4)
+
+age = int(input("enter your age"))
+heart_rate = int(input("enter your heart rate "))
+
+if age < 30 and heart_rate < 140 :
+    print("შეგიძლიათ მეტი ივარჯიშოთ")
+elif age >= 30 and heart_rate > 170 :
+    print("დასვენება გჭირდებათ")
+else :
+    print("აქტივობის დონე ნორმალურია")
+
+print(5)
+
+age = int(input("enter your age "))
+
+if age <= 12 :
+    print("ბევრი ვიტამინიანი საკვები")
+elif age <= 25 :
+    print("ენერგიის მომცემი საკვები")
+elif age <= 59 :
+    print("ბალანსირებული რაციონი")
+else :
+    print("დაბალკალორიული და მსუბუქი საკვები")
