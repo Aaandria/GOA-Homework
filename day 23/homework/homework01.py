@@ -1,11 +1,26 @@
-# დავალება 2 და 3: 
+# დავალება 2 : 
 
-print("სწორი სიტყვებია რომლებიც იწყება და მთავრდება ხმოვანზე")
-count = 0
-while count != 5 : 
-    str = input()
-    if  str[0] == "a" or str[0] == "e" or str[0] == "i" or str[0] == "o" or str[0] == "u" or str[0] == "y" or str[-1] == "a" or str[-1] == "e" or str[-1] == "i" or str[-1] == "o" or str[-1] == "u" or str[-1] == "y": 
-        count += 1
-print(count)
-         
-print("good job")
+lst = []
+
+vowels = "აეიოუ"
+
+for i in range (5) :
+    word = input("შეიყვანე სწორი სიტყვა, სწორი სიტყვაა რომელიც იწყება და მთავრდება თანხმოვნით ")
+
+    Fl = word[0]
+    ll = word[-1]
+
+    Fil = False
+    for i in vowels :
+        if Fl == i :
+            Fil = True
+            break
+    lal = False
+    for i in vowels :
+        if ll == i :
+            lal = True
+            break
+    if Fil == False and lal == False :
+        lst.append(word)
+
+print(lst)

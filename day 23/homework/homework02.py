@@ -1,8 +1,31 @@
-# დავალება 4:
-word = ''
-for i in range (10) :
-    str = input('enter a random word ')
-    if  str[0] == "a" or str[0] == "e" or str[0] == "i" or str[0] == "o" or str[0] == "u" or str[0] == "y" and str[-1] == "a" or str[-1] == "e" or str[-1] == "i" or str[-1] == "o" or str[-1] == "u" or str[-1] == "y":
-        word += str + ', '
-print(word)
+# დავალება 3:
+
+vowels = "აეიოუ"
+count = 0
+
+while True :
+    word = input("შეიყვანე სიტყვა ")
+
+    fl = word[0]
+    ll = word[-1]
+
+    fil = False
+    lal = False
+
+    for i in vowels :
+        if fl == i :
+            fil = True
+            break
+    for i in vowels :
+        if ll == i :
+            lal = True
+            break
+    if fil == False and lal == False :
+        print("მართალი ხარ")
+        break
+    else :
+        print("თავიდან ცადე")
+        count += 1
+print(f"შენი ცდებია {count}")        
+
     

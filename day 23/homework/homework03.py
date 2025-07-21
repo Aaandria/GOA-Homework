@@ -1,9 +1,21 @@
-# დავალება 5:
+# დავალება 4:
 
-str = input("enter a word ")
+vowels = "აეიოუ"
 
+for i in range (10) :
+    word = input("შეიყვანეთ სიტყვა ")
+    fl = word[0]
+    ll = word[-1]
+    fil = False
+    lal = False
 
-while str[0] == "a" or str[0] == "e" or str[0] == "i" or str[0] == "o" or str[0] == "u" or str[0] == "y" and str[-1] == "a" or str[-1] == "e" or str[-1] == "i" or str[-1] == "o" or str[-1] == "u" or str[-1] == "y":
-    #if str[0] == "a" or str[0] == "e" or str[0] == "i" or str[0] == "o" or str[0] == "u" or str[0] == "y" and str[-1] == "a" or str[-1] == "e" or str[-1] == "i" or str[-1] == "o" or str[-1] == "u" or str[-1] == "y":
-    print("try again")
-    str = input("again ")
+    for i in vowels :
+        if fl == i :
+            fil = True
+            break
+    for i in vowels :
+        if ll == i :
+            lal = True
+            break
+    if fil == False and lal == False :
+        print(word)
