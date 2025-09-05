@@ -1,0 +1,6 @@
+.container{
+    gap: 20px; flex-direction: column; display: flex; justify-content: center; background-color: aqua; width: 100%; height: 400px;
+      align-items: flex-start; align-items: center; align-self: center;
+}
+
+.div{background-color: red; width: 100px; height: 100px;}
