@@ -6,7 +6,7 @@ products = {
     "milk": 5
 }
 
-
+    
 #დაბეჭდე ყველა პროდუქტი for loop-ით.
 
 #მომხმარებლისგან შეიყვანე პროდუქტი, თუ არსებობს → დაბეჭდე ფასი.
@@ -23,6 +23,6 @@ word = input("enter one of the products: ")
 for items, price in products.items():
     if word == items:
         print(f"price is {price}")
-
+products.update({"grape" : 3})
 products.clear()
 print(products)
