@@ -1,0 +1,33 @@
+<!-- 2) იგივე ელემენტები გადაალაგე ვერტიკალურად (flex-direction: column). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+        flex-direction: column;
+    }
+    .div{
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div">hello</div>
+        <div class="div">hello</div>
+        <div class="div">hello</div>
+    </div>
+</body>
+</html>
