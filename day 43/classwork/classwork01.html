@@ -1,0 +1,24 @@
+<!-- 2) იგივე სამი div გამოიყენე, მაგრამ მეორე div-ს მიეცი:position: relative;
+top: 20px;
+left: 30px;
+დააკვირდი რა მოხდება.
+
+კომენტარებში ახსენი, რომ relative თავის ადგილზე რჩება, უბრალოდ იწევა იმიდან. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.div1{position: static; width: 100px; height: 100px; background-color: purple}
+        .div2{position: relative; width: 100px; height: 100px; background-color: red; top: 20px; left: 30px}
+        .div3{position: static; width: 100px; height: 100px; background-color: lightblue}
+    </style>
+</head>
+<body>
+    <div class="div1"></div><div class="div2"></div><div class="div3"></div>
+</body>
+</html>
+<!-- რადგან მეორე დივს position: relative-ი უწერია ის მისი განკუთვნილი ადგილიდან (სადაც position: static-ის დროს იყო) ჩავა 20
+ პიქსელით ქვემოთ და 30 პიქსელით მარჯვნივ -->

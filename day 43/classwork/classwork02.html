@@ -1,0 +1,27 @@
+<!-- 3) შექმენი სამი div.
+
+ერთ-ერთს მიეცი:position: absolute;
+top: 0;
+left: 0;
+დააკვირდი, როგორ გადადის ეკრანის ზედა კუთხეში და აღარ ითვალისწინებს სხვებს.
+
+ახსენი რატომ (absolute მიყვება body-ს ან უახლოეს relative parent-ს). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>.div1{position: static; width: 100px; height: 100px; background-color: purple}
+        .div2{position: absolute; width: 100px; height: 100px; background-color: red; top: 0px; left: 0px}
+        .div3{position: static; width: 100px; height: 100px; background-color: lightblue}
+    </style>
+</head>
+<body>
+    <div class="div1"></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+</body>
+</html>
+<!-- რადგან მეორე დივს position: absolute-ი ეწერა ის body tag-ის დასაწყისში გამოჩნდა რადგან position: absolute-ი მოძრაობს ბოდყ თაგში -->
