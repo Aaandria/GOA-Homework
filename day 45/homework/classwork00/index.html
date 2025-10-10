@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .container{width: 1440px; height: 900px; display: flex; align-items: center; justify-content: center; background-color: hsl(221, 100%, 96%);}
+    .div{width: 700px; height: 500px; background-color: white; border-radius: 20px;display: flex; flex-direction: row;}
+    .divi,.divv{width: 350px; height: 500px; display: flex; flex-direction: column; }
+    .divi{background-color: hsl(241, 81%, 54%); border-radius: 20px; justify-content: flex-start;  align-items: center;}
+    #h5{color: rgb(214, 214, 214);} .circle{width:140px; height: 140px; background-color: hsl(252, 100%, 67%); border-radius: 1000px; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+    .h1{color: white; font-size: 35px; display: inline;} .small{font-size: 10px; color: rgb(214, 214, 214)}
+    .divv{align-items: center; justify-content: flex-start;}
+    #a{width: 250px; height: 20px; background-color: hsl(0, 74%, 82%); display: flex; align-items: center; justify-content: space-between;}
+    .we{color: hsl(0, 100%, 67%); display: inline;}
+    #b{width: 250px; height: 20px; background-color: hsl(39, 87%, 82%); display: flex; align-items: center; justify-content: space-between;}
+    .we1{color:hsl(39, 100%, 56%); display: inline;}
+    #c{width: 250px; height: 20px; background-color: hsl(166, 86%, 84%); display: flex; align-items: center; justify-content: space-between;}
+    .we2{color:hsl(166, 100%, 37%); display: inline;}
+    #d{width: 250px; height: 20px; background-color: hsl(234, 86%, 81%); display: flex; align-items: center; justify-content: space-between;}
+    .we3{color:hsl(234, 85%, 45%); display: inline;}
+  </style>
+</head>
+<body>
+
+  <!--
+
+  Great
+  You scored higher than 65% of the people who have taken these tests.
+  
+  Summary
+
+  Reaction
+  80 / 100
+
+  Memory
+  92 / 100
+
+  Verbal
+  61 / 100
+
+  Visual
+  72 / 100
+
+  Continue -->
+  
+  <div class="container">
+    <div class="div">
+      <div class="divi">
+        <h5 id="h5">Your Result </h5>
+        <div class="circle"><p class="h1">76</p><p class="small">of 100</p></div>
+        <h2>Great</h2><p>You scored higher than 65% of the people who have taken these tests</p>
+      </div>
+      <div class="divv"><h2>summary</h2><div id="a"><div><img src="icon-reaction.svg" alt=""><p class="we">Reaction</p></div><p>80 / 100</p></div>
+      <div id="b"><div><img src="icon-memory.svg" alt=""><p class="we1">Memory</p></div><p>92 / 100</p></div>
+      <div id="c"><div><img src="icon-verbal.svg" alt=""><p class="we2">Verbal</p></div><p>61 / 100</p></div>
+      <div id="d"><div><img src="icon-visual.svg" alt=""><p class="we2">Visual</p></div><p>72 / 100</p></div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
