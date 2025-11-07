@@ -1,0 +1,22 @@
+<!-- 8) შექმენი ბლოკი, რომელიც hover-ზე გადაადგილდება მარჯვნივ 100px და ოდნავ იხრება,
+  გამოიყენე transform: translateX(100px) skew(5deg);  დაამატე transition: all 0.5s ease; 
+ კომენტარებით ახსენი თითოეული transform ფუნქცია  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .a{width:100px; height: 100px; background-color: red; transition: all 0.5s ease;}
+        .a :hover{transform: translateX(100px) skew(5deg);}
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+</body>
+</html>
+
+<!-- translateX(100px) ამოძრავებს დივს x ღერძზე 100 პიქსელით -->
+<!-- skew(5deg) ხრის დივს 5 გრადუსით -->

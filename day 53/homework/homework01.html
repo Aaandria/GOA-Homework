@@ -1,0 +1,21 @@
+<!-- 2) შექმენი ორი დივი, ორივე 100×100px.
+მოათავსე ისე, რომ ერთი იყოს მეორეზე ნახევრად.
+დაალაგე ისე, რომ წითელი იყოს ზემოთ. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{width:100px; height: 100px; position: absolute;}
+        .a{background-color: red;left:50px; z-index:2}
+        .b{background-color: blue; z-index:1}
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+    <div class="b"></div>
+</body>
+</html>

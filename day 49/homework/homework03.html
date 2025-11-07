@@ -1,0 +1,21 @@
+<!-- 4) შექმენი div ბლოკი, რომელსაც hover-ზე გამოიყენებ transform: skew(10deg, 5deg).
+ დაამატე transition ისე, რომ გადახრა იყოს გლუვი. div-ს მიეცი ზომა და ფერი, რომ შედეგი კარგად ჩანდეს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{width: 100px; height: 70px; background-color: red;
+        transition: all 1s linear}
+        .a :hover{
+            transform: skew(10deg, 5deg)
+        }
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+</body>
+</html>

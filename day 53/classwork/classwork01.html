@@ -1,0 +1,22 @@
+<!-- 2) შექმენი სამი კვადრატი (100×100px), რომლებიც ნაწილობრივ ერთმანეთს ფარავენ. 
+ დაალაგე ისე, რომ საშუალონაები (middle) იყოს ზედა, შემდეგ — გამარჯვე (right) და ბოლოს — მარცხნე (left). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{width: 100px; height: 100px; position: absolute;}
+        .a{z-index: 1; background-color: red; top: 20px}
+        .b{z-index: 2; background-color: blue; left: 20px }
+        .c{z-index: 3; background-color: aqua;}
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+    <div class="b"></div>
+    <div class="c"></div>
+</body>
+</html>

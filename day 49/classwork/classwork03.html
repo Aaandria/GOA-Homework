@@ -1,0 +1,25 @@
+<!-- 4) შექმენი ვებსაიტზე ღილაკების სექცია, სადაც ყოველი ღილაკი განსხვავებული ფორმით რეაგირებს hover-ზე 
+ერთი მოძრაობს, მეორე იხრება (skew), მესამე ბრუნდება (rotate), მეოთხე იზრდება (scale), მეხუთე კი თავის თავზე "ჩრდილს" აჩენს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{width:100px; height: 50px; background-color: red; transition: all 2s linear}
+        .a :hover{transform: translate(50px, 50px)}
+        .b :hover{transform: skewX(50deg)}
+        .c :hover{transform: rotate(50deg)}
+        .d :hover{transform: scale(2);}
+        .e :hover{border: solid 5px black}
+    </style>
+</head>
+<body>
+    <button class="a"></button>
+    <button class="b"></button>
+    <button class="c"></button>
+    <button class="d"></button>
+    <button class="e"></button>
+</html>
