@@ -1,0 +1,39 @@
+<!-- 1) შექმენით 2 სვეტიანი გრიდი.
+
+სხვადასხვა სიმაღლის ყუთები.
+
+გამოიყენეთ align-items სხვადასხვა ღირებულებებით (start, center, end).
+
+ნახეთ როგორ იცვლება ვერტიკალური განლაგება. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: 100px 300px;
+            grid-template-rows: 100px 100px 100px 100px;
+            align-items: end;
+            gap: 10px;
+        }
+        .item{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="item">1</div>
+    <div class="item">2</div> 
+    <div class="item">3</div>
+    <div class="item">4</div>   
+    </div>
+</body>
+</html>
+<!-- start ყველა ელემენტი ზემოთ აიყვანა -->
+<!-- center ყველა ელემენტი შუაში -->
+<!-- end ყველა ელემენტი ქვემოთ -->

@@ -1,0 +1,35 @@
+<!-- 4) შექმენით გრიდი 2 სვეტით, 4 რიგით.
+პირველი ყუთი იყოს მაღალი, მეორე ნორმალური.
+გამოიყენეთ align-items რომ ყუთები ვერტიკალურად სწორად განლაგდეს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont{
+            display: grid; background: linear-gradient(to right, red, blue);
+            grid-template-rows: repeat(8, 100px);
+            grid-template-columns: repeat(1, 100px);
+            gap: 10px
+        }
+        .div{
+            background: linear-gradient(to top, black, yellow);
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+        <div class="div"></div>
+    </div>
+</body>
+</html>

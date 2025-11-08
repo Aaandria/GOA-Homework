@@ -1,0 +1,32 @@
+<!-- 5) შექმენით 2 სვეტიანი გრიდი.
+შიგნით მოათავსეთ ტექსტით ყუთები.
+გამოიყენეთ justify-items რომ ტექსტი ჰორიზონტალურად დადგეს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cont{
+            display: grid; background: linear-gradient(to right, red, blue);
+            grid-template-rows: repeat(2, 100px);
+            grid-template-columns: repeat(2, 100px);
+            gap: 10px;
+            justify-items: center;
+        }
+        .div{
+            background: linear-gradient(to top, black, yellow);
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="div">hello</div>
+        <div class="div">world</div>
+        <div class="div">world</div>
+        <div class="div">hello</div>
+    </div>
+</body>
+</html>
