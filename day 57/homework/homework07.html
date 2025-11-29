@@ -1,0 +1,23 @@
+<!-- 8) 4) შექმენი ბლოკი, რომელიც active მდგომარეობაში 0.2 წამით ოდნავ ბრუნდება
+  (მაგ: რამდენიმე გრადუსით მარჯვნივ), ხოლო შემდეგ ბრუნდება საწყის პოზიციაზე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 250px; height: 250px; position: absolute; left: 500px; top: 400px; background: linear-gradient(to left, black, yellow);
+            cursor: pointer; transition: 0.2s;
+        }
+        div:active{
+            transform: rotate(50deg)
+        }
+    </style>
+</head>
+<body>
+    <div>:active example</div>
+</body>
+</html>

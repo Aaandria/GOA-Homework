@@ -1,0 +1,22 @@
+<!-- 9) შექმენი ღილაკი, რომელსაც active მომენტში ფონური ფერი საიმედოდ 
+ ბნელდება და ტექსტი ოდნავ ჩამოდის ქვემოთ. ეფექტი უნდა გაგრძელდეს მხოლოდ დაჭერის განმავლობაში. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            width:200px; height: 50px; background: red; color: white; border: none; border-radius: 15px;
+        }
+        button:active{
+            background: grey; text-align: end;
+        }
+    </style>
+</head>
+<body>
+    <h1>:active</h1>
+    <button>active example</button>
+</body>

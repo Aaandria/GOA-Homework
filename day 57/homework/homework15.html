@@ -1,0 +1,21 @@
+<!-- 16) შექმენი email input, რომელიც :valid მდგომარეობაში მიიღებს მწვანე ჩარჩოს, ხოლო :invalid მდგომარეობაში — წითელ ჩარჩოს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:invalid{
+            border: solid 1px red;
+        }
+        input:valid{
+            border: solid 1px green;
+        }
+    </style>
+</head>
+<body>
+    <input type="email">
+</body>
+</html>

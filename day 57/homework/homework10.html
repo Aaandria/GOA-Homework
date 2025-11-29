@@ -1,0 +1,22 @@
+<!-- 11) შექმენი input ველი, რომელიც focus მდგომარეობაში
+  ოდნავ გადიდდება და იღებს რბილ ჩრდილს, რათა აშკარად გამოჩნდეს რომ მომხმარებელი სწორედ ამ ველში წერს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    input{
+      width: 190px; height: 30px; border: solid 5px red; transition: 50ms; box-shadow: 5px 5px 5px 5px red;
+    }
+    input:focus{
+      transform: scale(1.1); box-shadow: 5px 5px 5px 5px greenyellow; border: solid 5px greenyellow;
+    }
+  </style>
+</head>
+<body>
+  <input type="text" placeholder="focus example">
+</body>
+</html>

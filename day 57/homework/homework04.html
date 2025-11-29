@@ -1,0 +1,25 @@
+<!-- 5) შექმენი დივი რომელზეც გექნებათ ანიმაცია: როცა მომხმარებელი მაუსს მიიტანს დივზე,
+  0%-ზე იყოს პატარა, 50% გაიზარდოს 2 ჯერ და 100% გაიზარდოს 3ჯერ. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>div{width: 100px; height: 100px; background: red;
+      cursor: pointer;}
+    div:hover{
+        animation-name: grow; animation-duration: 1ms;
+    }
+    @keyframes grow{
+        0%{transform: scale(0);}
+        50%{transform: scale(2);}
+        100%{transform: scale(3);}
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
