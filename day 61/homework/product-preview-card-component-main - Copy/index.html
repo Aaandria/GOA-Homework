@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .container{
+      width: 1440px; background-color: hsl(30, 38%, 92%);
+      height: 750px; display: flex; align-items: center; justify-content: center;
+    }
+    .div{
+      width: 700px; height: 500px; background-color: white;
+      border-radius: 15px; display: flex; justify-content: center; align-items: center; flex-direction: row;
+    }
+    .baby, .b{
+      height: 500px; width: 350px;
+    }
+    .img{
+      border-radius: 15px;
+    }
+    .b{
+      display: flex; align-items: center; justify-content: center; flex-direction: column;
+    }
+    h5{
+      color: hsl(228, 12%, 48%); margin: 10px;
+    }
+    h1{margin: 10px;}
+    .big{color: rgb(18, 116, 25); font-size: 50px; display: inline; margin: 10px;}
+    h6{display: inline; margin: 10px;}
+    button{background: green; border: none; margin: 10px;}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="div">
+      <div class="baby"><img src="image-product-desktop.jpg" width="350px" height="500px" class="img"></div>
+      <div class="b">
+        <h5>Perfume</h5>
+        <h1>Gabrielle Essence Eau De Parfum</h1>
+        <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+          Perfumer-Creator for the House of CHANEL.</p>
+        <p class="big">
+          $149.99
+        </p>
+        <h6>$169.99</h6>
+        <button>Add to Cart </button>
+      </div>
+    </div>
+  </div>
+  <!-- 
+
+  Gabrielle Essence Eau De Parfum
+
+  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+  Perfumer-Creator for the House of CHANEL.
+
+  $149.99
+  $169.99
+
+  Add to Cart -->
+  
+</body>
+</html>
