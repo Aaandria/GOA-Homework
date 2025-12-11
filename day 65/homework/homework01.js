@@ -1,0 +1,1 @@
+let friends = ["jemala", "nugzara", "anzori"]
