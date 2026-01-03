@@ -1,0 +1,28 @@
+<!-- 5) ორი ღილაკი: ერთით დაამატე classList.add() ტექსტზე ელემენტის გამოჩენა, მეორით classList.remove() – ტექსტის დამალვა. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{display: none;}
+        .show{display: block;}
+    </style>
+</head>
+<body>
+    <p id="text">text 1</p>
+    <button onclick="show()">Click to show</button>
+    <button onclick="hide()">Click to hide</button>
+    <script>
+        let text = document.getElementById("text")
+        function show(){
+            text.classList.add("show")
+        }
+        function hide(){
+            text.classList.remove("show")
+        }
+    </script>
+</body>
+</html>

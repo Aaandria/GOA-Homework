@@ -1,0 +1,20 @@
+<!-- 1) შექმენი ღილაკი. დაჭერისას <div>-ში innerHTML-ის დახმარებით გამოჩნდეს ტექსტი: "Hello JavaScript". -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="js">hi</div>
+    <button onclick="sayHi()">press this</button>
+    <script>
+        let greet = document.getElementById("js")
+        function sayHi(){
+            greet.innerHTML="Hello JavaScript"
+        }
+    </script>
+</body>
+</html>

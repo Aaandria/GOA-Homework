@@ -1,0 +1,4 @@
+# 1) https://www.codewars.com/kata/6707688c0f597511f6649270/train/python
+
+def was_package_received_yesterday(tz_from, tz_to, start, duration):
+    return start < tz_from - tz_to - duration

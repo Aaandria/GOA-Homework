@@ -1,0 +1,32 @@
+<!-- 8) შექმენი <div> და innerHTML-ის დახმარებით დაამატე ბუტონები:
+ერთი classList.toggle()–ით შეცვლის ფონს, მეორე classList.toggle()–ით შეცვლის ტექსტის ფერს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .background{
+            background-color: aqua;
+        }
+        .color{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        let box = document.getElementById("box")
+        box.innerHTML = "<button onclick='change()'> click to change background</button><button onclick='different()'>click to change text color</button>"
+        function change(){
+            box.classList.toggle("background")
+        }
+        function different(){
+            box.classList.toggle("color")
+        }
+    </script>
+</body>
+</html>

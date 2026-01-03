@@ -1,0 +1,35 @@
+<!-- 6) შექმენი small quiz: <div>-ში innerHTML-ის გამოყენებით გამოიტანე კითხვა,
+     და პასუხის ღილაკზე დაჭერისას classList.add()–ით მიუთითე სწორ/არასწორ პასუხზე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .correct{
+            background: greenyellow;
+        }
+        .incorrect{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="quiz"></div>
+    <button onclick="correct()">answer 1</button>
+    <button onclick="incorrect()">answer 2</button>
+    <script>
+        let quiz = document.getElementById("quiz")
+        quiz.innerHTML="random quistion?"
+        let show = document.getElementsByTagName("body")[0]
+        function correct(){
+            show.classList.add("correct")
+        }
+        function incorrect(){
+            show.classList.add("incorrect")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- 3) შექმენი სამი div grid-ით: desktop-ზე იყოს 3 სვეტი, ხოლო mobile-ზე (max-width: 768px) დარჩეს მხოლოდ 1 სვეტი. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background: red;
+        }
+        body{
+            display: grid;
+            gap: 5px;
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 200px;
+        }
+        @media(max-width: 768px){
+            body{
+                grid-template-columns: 200px;
+                grid-template-rows: 200px 200px 200px
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+</body>
+</html>

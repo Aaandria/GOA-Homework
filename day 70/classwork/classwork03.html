@@ -1,0 +1,29 @@
+<!-- 4) შექმენი ორი div, გამოიყენე display: flex; desktop-ზე ელემენტები იყოს ერთ
+  ხაზზე, ხოლო mobile-ზე (max-width: 768px) გადალაგდეს ერთმანეთის ქვეშ.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px; height: 200px; background: red;
+        }
+        body{
+            display: flex;
+            flex-direction: row;
+        }
+        @media (max-width: 768px){
+            body{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>div 1</div>
+    <div> div 2</div>
+</body>
+</html>

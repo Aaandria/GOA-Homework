@@ -1,0 +1,20 @@
+<!-- 3) ღილაკზე დაჭერისას innerHTML-ით შეცვალე <div>-ის შიგთავსი ისე, რომ ძველი ტექსტი გაქრეს და ახალი გამოჩნდეს. --->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">previous</div>
+    <button onclick="change()">change text</button>
+    <script>
+        let box = document.getElementById("box")
+        function change(){
+            box.innerHTML="previous <br> new text"
+        }
+    </script>
+</body>
+</html>

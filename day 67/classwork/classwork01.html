@@ -1,0 +1,20 @@
+<!-- 2) შექმენი 3 <p> ელემენტი ერთნაირი class="text"-ით. getElementsByClassName-ით 
+    წამოიღე ისინი და მხოლოდ პირველ პარაგრაფს შეუცვალე ფერი (მაგალითად ლურჯი). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="text">hello</p>
+    <p class="text">hello</p>
+    <p class="text">hello</p>
+    <script>
+        const para = document.getElementsByClassName("text")
+        para[0].style.color = "blue"
+    </script>
+</body>
+</html>

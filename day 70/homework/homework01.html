@@ -1,0 +1,23 @@
+<!-- 2) დაამატე ტექსტი p, რომელიც desktop-ზე იყოს ცენტრში (text-align: center), ხოლო mobile-ზე გადავიდეს მარცხნივ (text-align: left). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            text-align: center;
+        }
+        @media (max-width: 600px){
+            p{
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>something important</p>
+</body>
+</html>

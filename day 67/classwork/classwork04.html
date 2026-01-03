@@ -1,0 +1,21 @@
+<!-- 5) შექმენი ერთი ღილაკი და ერთი ტექსტი (<p>). JavaScript-ში წამოიღე ტექსტი
+     id-ით და პირდაპირ კოდში (click-ის გარეშე) გაუკეთე სტილები: ფერი, ფონტი და ზომა. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="para">random text</button>
+    <script>
+        const paragraph = document.getElementById("para")
+        paragraph.style.color = "red"
+        paragraph.style.fontSize = "32px"
+        paragraph.style.width = "200px"
+        paragraph.style.backgroundColor = "black"
+    </script>
+</body>
+</html>

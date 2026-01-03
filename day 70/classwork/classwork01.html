@@ -1,0 +1,24 @@
+<!-- 2) დაამატე გვერდზე h1 ტექსტი, რომლის ზომა desktop-ზე იქნება 40px, 
+ ხოლო mobile-ზე (max-width: 768px) შემცირდეს 24px-მდე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 40px;
+        }
+        @media (max-width: 768px) {
+            h1{
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>hello world</h1>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!-- 4.შექმენი 5 li ელემენტი სიაში და JS-ში წამოიღე getElementsByTagName-ით.
+  ყველა li-ს დაუმატე padding, margin-bottom, background-color, border-radius,
+   list-style-type, text-transform. პირველი li-ს ტექსტის ფერი გახადე წითელი, ბოლოას მწვანე -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <li>efwp</li>
+    <li>2jf9-2iw[</li>
+    <li>aufnpsn</li>
+    <li>wiojwf2p4</li>
+    <li>52hefhwp</li>
+    <script>
+        let l = document.getElementsByTagName("li")
+        for(i=0; i<l.length; i++){
+            l[i].style.padding = "10px"
+            l[i].style.marginBottom = "5px"
+            l[i].style.backgroundColor = "red"
+            l[i].style.borderRadius = "10px"
+            l[i].style.listStyleType = "none"
+            l[i].style.textTransform = "capitalise"
+        }
+        l[0].style.color = "red"
+        l[4].style.color = "green"
+    </script>
+</body>
+</html>

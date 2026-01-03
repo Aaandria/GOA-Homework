@@ -1,0 +1,37 @@
+<!-- 4) შექმენი <div> და CSS კლასი .red (წითელი ფონი). ღილაკზე დაჭერისას classList.add()-ით დაამატე ეს კლასი. -->
+<!-- 5) მეორე ღილაკზე დაჭერისას classList.remove()-ით მოაშორე .red კლასი. -->
+<!-- 6) ერთი ღილაკით გააკეთე კლასის ჩართვა/გამორთვა classList.toggle()-ის გამოყენებით. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .red{
+            background-color: red;
+        }
+        .circle{
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">text</div>
+    <button onclick="makeRed()">click to turn red</button>
+    <button onclick="removeRed()">click to remove red</button>
+    <button onclick="changeBorder()">click to make round and changee back</button>
+    <script>
+        let box = document.getElementById("box")
+        function makeRed(){
+            box.classList.add("red")
+        }
+        function removeRed(){
+            box.classList.remove("red")
+        }
+        function changeBorder(){
+            box.classList.toggle("circle")
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!-- 7) შექმენი მარტივი navigation menu ლინკებით: desktop-ზე 
+ ლინკები განლაგდეს ჰორიზონტალურად, ხოლო mobile-ზე (max-width: 768px) ვერტიკალურად. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{display: flex; flex-direction: row;}
+        @media (max-width: 768px){
+            ul{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+        <li>nav1</li>
+        <li>nav2</li>
+        <li>nav3</li>
+        <li>nav4</li>
+        </ul>
+    </nav>
+</body>
+</html>

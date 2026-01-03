@@ -1,0 +1,27 @@
+<!-- 7) შექმენი shopping cart ელემენტი: <div id="cart"></div>.
+  ღილაკზე innerHTML-ის გამოყენებით დაამატე ნივთი სიაში, classList.add()–ით მიუთითე, რომ ეს ახალი ნივთია. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .new{
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="cart"></div>
+    <button onclick="add()">click to add a new element</button>
+    <script>
+        let cart = document.getElementById("cart")
+        function add(){
+            cart.innerHTML="<p>new item</p>"
+            cart.classList.add("new")
+        }
+    </script>
+</body>
+</html>
