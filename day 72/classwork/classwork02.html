@@ -1,0 +1,34 @@
+<!-- 3) ამის შემდეგ შექმენი წრე, რომელიც უსასრულოდ ხტუნავს — მოძრაობა უნდა იყოს ზემოთ და ქვემოთ 
+ #(translateY(0 → -40px → 0)), შესრულდეს @keyframes-ით და იმეორებდეს უსასრულოდ. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            animation: bounce  2s infinite;
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            background-color: red;
+        }
+        @keyframes bounce{
+            0%{
+                transform: translateY(0px);
+            }
+            50%{
+                transform: translateY(40px);
+            }
+            100%{
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

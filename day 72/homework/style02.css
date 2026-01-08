@@ -1,0 +1,39 @@
+body{
+    height:500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spin{
+    width: 150px;
+    height: 150px;
+    animation: spin 5s infinite;
+}
+    
+
+.circleA, .circleB, .circleC, .circleD{
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 100%;
+    position: relative;
+}
+
+.circleA{
+    left: 50px
+}
+.circleC{
+    bottom: 50px;
+    left: 100px;
+}
+.circleD{
+    bottom: 50px;
+    left: 50px;
+}
+
+@keyframes spin {
+    to{
+        transform: rotate(360deg);
+    }
+}

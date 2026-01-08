@@ -1,0 +1,23 @@
+<!-- 2) შემდეგ გააკეთე ღილაკი, რომელიც მაუსის გადატარებისას ოდნავ გაიზრდება (scale(1.1)), 
+ და ეს ცვლილება იყოს რბილი transition-ის დახმარებით, დაახლოებით 0.3 წამში. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <button>click!</button>
+</body>
+</html>

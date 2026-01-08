@@ -1,0 +1,34 @@
+<!-- 1) შექმენი div, რომელიც გვერდის ჩატვირთვისას ნელა გამოჩნდება — ანიმაცია უნდა დაიწყოს opacity: 
+ 0-ით და დასრულდეს opacity: 1-ზე, ხანგრძლივობა იყოს დაახლოებით 1 წამი. ბონუსად შეგიძლია დაამატო,
+  რომ ტექსტი ან ბლოკი ოდნავ ქვემოდან ამოვიდეს translateY(20px)-დან translateY(0)-მდე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px; 
+            height: 200px;
+            background-color: red;
+            animation: appear 1s;
+            
+        }
+        @keyframes appear{
+            0%{
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

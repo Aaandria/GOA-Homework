@@ -1,0 +1,24 @@
+
+
+.box{
+    width: 80%;
+    margin: 10%;
+    height:10px;
+    border: solid 2px;
+    overflow: hidden;
+    display: flex;
+}
+
+.loading{
+    background: red;
+    height: 10px;
+    width: 200%;
+    
+    animation: loading 5s;
+}
+
+@keyframes loading{
+    from{
+        width: 0%;
+    }
+}
