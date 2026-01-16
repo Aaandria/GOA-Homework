@@ -1,0 +1,36 @@
+<!-- 3)Live Comment Viewer
+შექმენი input ველი და p ელემენტი
+რაც მომხმარებელი აკრიფავს input–ში რეალურ დროში უნდა გამოჩნდეს p–ში
+თუ input ცარიელია p–ში უნდა ეწეროს Start typing…
+გამოიყენე input event innerHTML value. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="email" >
+        <button>click to send ur email</button>
+    </form>
+    <p></p>
+
+    <script>
+        let form = document.querySelector("form")
+        let input = document.querySelector("input")
+        let text = document.querySelector("p")
+
+        form.addEventListener("submit", function(e){
+            e.preventDefault()
+            if(input.value === ""){
+                text.innerHTML= "enter your email!!!"
+            } else{
+                text.innerHTML = "good job!"
+            }
+        })
+    </script>
+</body>
+</html>

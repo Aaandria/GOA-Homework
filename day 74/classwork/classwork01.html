@@ -1,0 +1,36 @@
+<!-- 2) შექმენი div ბურთის ფორმით და გააკეთე bounce ანიმაცია, სადაც ბურთი ზემოთ-ქვემოთ მოძრაობს უსასრულოდ. -->
+<!-- 3) bounce-ის დროს შეცვალე: 
+ქვემოთ ჩამოსვლისას scaleX გაიზრდოს და ზემოთ ასვლისას დაპატარავდეს -->
+<!-- 4) ასევე bounce ანიმაცია ჩამოსვლისას იყოს სწრაფი ასვლისას ნელი -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            animation: bounce  2s infinite cubic-bezier(1, 0, 0, 1);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: red;
+        }
+        @keyframes bounce{
+            0%{
+                transform: translateY(0px) scaleX(1);
+            }
+            50%{
+                transform: translateY(50px) scaleX(1.5);
+            }
+            100%{
+                transform: translateY(0px) scaleX(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

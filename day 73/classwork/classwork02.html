@@ -1,0 +1,21 @@
+<!-- 3)დამატე ელემენტს მოვლენა click და შეუცვალე ფერი ღილაკზე დაჭერისას. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>blablabla</p>
+    <button id="color">press to change color</button>
+    <script>
+        let text = document.querySelector("p")
+        let changeColor = document.getElementById("color")
+        changeColor.addEventListener("click", function(){
+            text.style.color = "red"
+        })
+    </script>
+</body>
+</html>

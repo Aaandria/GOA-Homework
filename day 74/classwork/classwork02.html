@@ -1,0 +1,36 @@
+<!-- 5) შექმენი ტექსტი (h1), რომელსაც ექნბა LED ეფექტი, ანუ ფერრი იცვლებოდეს  უსასრულოდ -->
+<!-- 6) გამოიყენეთ მინიმუმ 5 სხვადასხვა ფერი @keyframes-ში -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        h1{
+            animation: LED 2s infinite alternate;
+            color: red;
+        }
+        @keyframes LED{
+            0%{color: red;}
+            10%{color: aqua;}
+            20%{color: pink;}
+            30%{color: blue;}
+            40%{color: greenyellow;}
+            50%{color: green;}
+            60%{color: blueviolet;}
+            70%{color: violet;}
+            80%{color: blanchedalmond;}
+            90%{color: aquamarine;}
+            100%{color: red;}
+        }
+    </style>
+</head>
+<body>
+    <h1>hello world</h1>
+</body>
+</html>

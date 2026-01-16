@@ -1,0 +1,35 @@
+<!-- 1)Smart Message Box
+შექმენი div id="messageBox" და ღილაკი
+ღილაკზე დაჭერისას უნდა შეიცვალოს ტექსტი
+ფერი უნდა შეიცვალოს CSS კლასის დახმარებით
+მეორედ დაჭერაზე ყველაფერი უნდა დაბრუნდეს საწყის მდგომარეობაში
+გამოიყენე getElementById click innerHTML classList.toggle. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="messageBox"></div>
+    <button>click to change text and color</button>
+
+    <script>
+        let text = document.getElementById("messageBox")
+        let btn = document.querySelector("button")
+
+        btn.addEventListener("click", function(){
+            text.innerHTML = "new text"
+            text.classList.toggle("color")
+        })
+
+    </script>
+</body>
+</html>

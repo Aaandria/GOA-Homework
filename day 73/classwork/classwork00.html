@@ -1,0 +1,20 @@
+<!-- 1)დაალაგე ელემენტი მისი ID-ით და შეცვალე მისი ტექსტი ღილაკზე დაჭერისას. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. A eum vitae dolorem vero ex, voluptate, delectus excepturi quod culpa facere voluptas placeat provident assumenda inventore quisquam id magni libero! Unde?</p>
+    <button onclick="changeText()">click to change text</button>
+    <script>
+        let text = document.getElementById("text")
+        function changeText(){
+            text.innerHTML="new text"
+        }
+    </script>
+</body>
+</html>

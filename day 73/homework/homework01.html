@@ -1,0 +1,26 @@
+<!-- 2)Color Hover Panel
+შექმენი div class="panel"
+JS–ით querySelector–ის გამოყენებით მოძებნე ეს ელემენტი
+მაუსის მიყვანისას უნდა შეეცვალოს ფერი
+მაუსის გაწევისას უნდა დაუბრუნდეს საწყის ფერს. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color{color: red;}
+    </style>
+</head>
+<body>
+    <p class="panel">bla bla bla</p>
+    <script>
+        let box = document.querySelector(".panel")
+        box.addEventListener("mouseover", function(){
+            box.classList.toggle("color")
+        })
+    </script>
+</body>
+</html>

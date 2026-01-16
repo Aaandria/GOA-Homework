@@ -1,0 +1,40 @@
+<!-- 5)Show / Hide Info
+შექმენი ტექსტი რომელიც თავიდან დამალულია
+შექმენი ღილაკი
+ღილაკზე დაჭერით ტექსტი უნდა გამოჩნდეს
+მეორედ დაჭერით ისევ უნდა დაიმალოს
+გამოიყენე classList.toggle ან classList.add და remove. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <p class="text">bla bla bla</p>
+    <button id="appear">click to make text appear</button>
+    <button id="hide">click to make text hide</button>
+    <script>
+        let text = document.querySelector(".text")
+        let appear = document.getElementById("appear")
+        let hide = document.getElementById("hide")
+
+        appear.addEventListener("click", function(){
+            text.classList.add("show")
+        })
+        hide.addEventListener("click", function(){
+            text.classList.remove("show")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!-- 4)Add New Paragraph
+შექმენი ღილაკი
+ღილაკზე დაჭერისას უნდა შეიქმნას ახალი p ელემენტი ტექსტით New paragraph created
+და დაემატოს გვერდზე
+გამოიყენე click createElement appendChild. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>create new paragraph</button>
+
+    <script>
+        let btn = document.querySelector("button")
+        btn.addEventListener("click", function(){
+            let text = document.createElement("p")
+            text.innerHTML = "New paragraph created"
+            document.body.appendChild(text)
+        })
+    </script>
+</body>
+</html>

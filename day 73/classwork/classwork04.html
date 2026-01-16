@@ -1,0 +1,35 @@
+<!-- 5)დაამატე და წაშალე CSS კლასები ელემენტიდან (მაგალითად ფერის შეცვლა ან ტექსტის გამოჩენა/დამალვა). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .display{
+            display: none;
+        }
+        .color{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>bla bla bla</p>
+    <button id="changeColor">click to change color</button>
+    <button id="toggleDisplay">click to make text dissapear/appear</button>
+
+    <script>
+        let text = document.querySelector("p")
+        let color = document.getElementById("changeColor")
+        let display = document.getElementById("toggleDisplay")
+        color.addEventListener("click", function(){
+            text.classList.add("color")
+        })
+        display.addEventListener("click", function(){
+            text.classList.toggle("display")
+        })
+    </script>
+</body>
+</html>

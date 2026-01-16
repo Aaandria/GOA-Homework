@@ -1,0 +1,23 @@
+<!-- 7)შექმენი input ველი სასურველ თემაზე რომ მომხმარებელმა აკრიფილი ტექსტი რეალურ დროში. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter your text">
+    <p></p>
+
+    <script>
+        let user = document.querySelector("input")
+        let text = document.querySelector("p")
+
+        user.addEventListener("input", function(){
+            text.innerHTML = "your name is " + user.value
+        })
+    </script>
+</body>
+</html>
