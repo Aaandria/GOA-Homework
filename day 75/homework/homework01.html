@@ -1,0 +1,32 @@
+<!-- 2)Mouseleave – ფერის ციკლური ცვლილება
+შექმენი div „Hover me too“
+როცა მაუსი div-ზე გავა, ფერი უცებ ვერ შეიცვლება
+როცა მაუსი div-დან გავა, ფერი ციკლურად შეიცვალოს წინასწარ ჩაწერილი ფერების სიიდან (მაგ: purple → teal → brown → blue → green)
+ყოველშემდეგ mouseleave-ზე ჩართულ ფერს დაუმატე შემდეგი ფერი სია. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>hover me too</div>
+
+    <script>
+        const box = document.querySelector("div")
+
+        const colors = ["purple", "teal", "brown", "blue", "green"]
+        let index = 0
+
+        box.addEventListener("mouseleave", function(){
+            index = (index + 1) % colors.length
+            box.style.background = colors[index]
+        })
+        box.addEventListener("mouseover", function(){
+            box.style.background = "none"
+        })
+    </script>
+</body>
+</html>

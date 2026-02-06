@@ -1,0 +1,25 @@
+<!-- 4) შექმენი ცვლადი --btn-bg ღილაკის ფონისთვის და --btn-hover hover ეფექტისთვის, გამოიყენე ეს ცვლადები .btn კლასზე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --btn-bg: blue;
+            --btn-hover: red;
+        }
+        .btn{
+            background-color: var(--btn-bg);
+        }
+        .btn:hover{
+            background-color: var(--btn-hover);
+        }
+    </style>
+</head>
+<body>
+    <button class="btn"></button>
+</body>
+</html>

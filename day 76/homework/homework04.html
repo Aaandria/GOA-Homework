@@ -1,0 +1,53 @@
+<!-- 5)ააწყეთ dark\light mode css ით როგორც გაკვეთილზე ავაწყეთ. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .content {
+            background-color: white;
+            color: black;
+            height: 100vh;
+            padding: 40px;
+            transition: 0.3s;
+        } 
+
+        #mode {
+            display: none;
+        }
+
+        .switch {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            background: blue;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #mode:checked + .switch {
+            background: black;
+        }
+
+        #mode:checked ~ .content, body{
+            background: #141414;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="mode">
+    <label for="mode" class="switch">Dark / Light</label>
+    <div class="content"></div>
+</body>
+</html>

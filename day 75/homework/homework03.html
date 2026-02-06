@@ -1,0 +1,36 @@
+<!-- 4)Keyup – სიმბოლოების რაოდენობის გაჩვენება
+შექმენი input ველი
+ყოველი keyup-ზე გაჩვენდეს ტექსტი „You typed X characters“
+თუ დაიკრიფა 5 ან მეტი ასო, ტექსტის ფერი წითლად უნდა შეიცვალოს -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input>
+
+    <script>
+        let box = document.querySelector("input")
+        
+        box.addEventListener("keyup", function(e){
+            
+            if(box.value.length < 6){
+                let text = document.createElement("p")
+                text.innerHTML = "You typed X characters"
+                document.body.appendChild(text)
+            }
+            else{
+                let textA = document.getElementsByTagName("p")
+                for(i=0; i<textA.length; i++){
+                    textA[i].style.color = "red"
+                }
+            }
+            
+        })
+    </script>
+</body>
+</html>

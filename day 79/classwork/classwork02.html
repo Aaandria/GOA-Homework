@@ -1,0 +1,26 @@
+<!-- 3)შექმენი ღილაკი (button) და ::before-ით დაამატე მარცხენა მხარეს პატარა ხაზი, რომელიც ღილაკის სიმაღლეს ერგება. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{position: relative;}
+        button::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: red;
+            width: 5px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button>::before</button>
+</body>
+</html>

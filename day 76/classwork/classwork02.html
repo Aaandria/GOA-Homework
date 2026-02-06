@@ -1,0 +1,24 @@
+<!-- 3) შექმნეი :root-ში ორი ცვლადი : --main-color და --secondar-color, გამოიყენე --main-color 
+ როგორც ფონის ფერი body-ზე, გამოიყენე --secondar-color როგორც ტექსტის ფერი h1-ზე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --main-color: blue;
+            --secondary-color: red;
+        }
+        body{
+            background-color:var(--main-color);
+        }
+        h1{color: var(--secondary-color);}
+    </style>
+</head>
+<body>
+    <h1>bla bla bla</h1>
+</body>
+</html>

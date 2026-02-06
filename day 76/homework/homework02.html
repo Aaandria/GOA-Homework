@@ -1,0 +1,29 @@
+<!-- 3)შერეული – სამკუთხედი + ცვლადი
+პირობა:
+შექმენით ყუთი (div) ზომით 200px x 200px.
+შექმენით ცვლადი --shape-color ფონისთვის
+გამოიყენეთ clip-path, რომ ყუთი იყოს სამკუთხედი -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --shape-color: red;
+        }
+
+        div{
+            width: 200px;
+            height: 200px;
+            clip-path: polygon(0 100px, 50px 0, 100px 100px);
+            background-color: var(--shape-color);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

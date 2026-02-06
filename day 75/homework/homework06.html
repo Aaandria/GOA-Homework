@@ -1,0 +1,23 @@
+<!-- 7)Blur – ფონური ფერი და ტექსტის ფერი
+შექმენი input ველი
+როცა დატოვებს input-ი, ფონური ფერი ვარდისფრად უნდა შეიცვალოს
+ტექსტის ფერი უნდა გახდეს თეთრი -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input >
+
+    <script>
+        document.querySelector("input").addEventListener("blur", function(){
+            this.style.background = "pink"
+            this.style.color = "white"
+        })
+    </script>
+</body>
+</html>

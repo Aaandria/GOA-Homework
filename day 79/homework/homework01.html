@@ -1,0 +1,25 @@
+<!-- 2) შექმენი სათაური (h1) და ::after-ით დაუმატე ქვედა ხაზი, რომლის სიგანე გამოითვლება calc(100% / 2). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{position: relative; display: inline;}
+        h1::after{
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            width: calc(100% / 2);
+            height: 5px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>text</h1>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!-- 5) შექმენი div ბლოკი და ::before-ით დაუმატე ფონზე ნახევრად გამჭვირვალე ფენა. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{position: relative}
+        div::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            opacity: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <div>smth</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!-- 8)Keydown + Keyup – აკრძალული ასოები და Shift
+შექმენი input ველი
+აკრძალე ასოები A, B, C
+აკრძალე Shift-ის გამოყენება
+აკრძალული ასოს ან Shift-ის გამოყენებისას input-ს სურათი ან საზღვარი წითლად გამოჩნდეს
+keyup-ზე საზღვარი დაბრუნდეს ნორმალურ ფერში -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+</head>
+<body>
+    <input>
+
+    <script>
+         let text = document.querySelector("input")
+         
+         text.addEventListener("keydown", function(e){
+            let invalid = ["Shift", "A", "B", "C"]
+            for(let i = 0; i<invalid.length; i++){
+                
+                if(e.key === invalid[i]){
+                    alert()
+                    e.preventDefault()
+                    this.style.background = "red"
+                }
+            }
+        })
+
+        text.addEventListener()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!-- 7) ააწყვეთ მსგავის Admin panel როგორც სურათზეა ნაჩვენები -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+        }
+        .panel{
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 20%;
+            margin: 0;
+            padding: 0;
+            background-color: gray;
+        }
+        .content{
+            height: 100%;
+            width: calc(100% - 20%);
+            background-color: teal;
+            position: relative;
+            left: 20%;
+            margin: 0; padding: 0;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+        }
+        li{list-style: none;}
+    </style>
+</head>
+<body>
+    <div class="panel">
+        <ul>
+            <li>setting</li>
+            <li>home</li>
+            <li>more</li>
+            <li>other</li>
+            <li>about us</li>
+        </ul>
+    </div>
+    <div class="content"></div>
+</body>
+</html>

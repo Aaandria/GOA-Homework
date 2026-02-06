@@ -1,0 +1,32 @@
+<!-- 2) keydown
+დავალება:
+შექმენით input ველი
+აკრძალეთ ასოები: a, b, c
+დანარჩენი ასოები აკრეფას შეძლებენ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input >
+
+    <script>
+        document.querySelector("input").addEventListener("keydown", function(e){
+            if(e.key === "a"){
+                alert("incorect letter")
+                e.preventDefault()
+            } else if(e.key === "b"){
+                alert("ncorect letter")
+                e.preventDefault()
+            } else if(e.key === "c"){
+                alert("incorect letter")
+                e.preventDefault()
+            }
+        })
+    </script>
+</body>
+</html>

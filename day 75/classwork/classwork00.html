@@ -1,0 +1,24 @@
+<!-- 1) mouseleave
+დავალება:
+შექმენით პატარა ყუთი (div) „Hover me“
+მაუსი რომ გავა ყუთიდან, ფერი წითელი გახდეს -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">hover me</div>
+
+    <script>
+        let box = document.getElementById("box")
+
+        box.addEventListener("mouseleave", function(){
+            box.style.background = "red"
+        })
+    </script>
+</body>
+</html>
