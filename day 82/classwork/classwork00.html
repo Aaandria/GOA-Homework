@@ -1,0 +1,34 @@
+<!-- 1) შექმენი დივ ელემენტი, რომელიც გვერდის ჩატვირთვისას ნელა შეიცვლის ფერს ერთი ფერიდან მეორეზე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 80%;
+            margin: 10%;
+            height:10px;
+            border: solid 2px;
+            overflow: hidden;
+            display: flex;
+        }
+        .loading{
+            background: red;
+            height: 10px;
+            width: 100%;
+            animation: loading 5s ease infinite;
+        }
+        @keyframes loading{
+            from{
+                width: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"><div class="loading"></div></div>
+</body>
+</html>

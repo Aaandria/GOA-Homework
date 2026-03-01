@@ -1,0 +1,41 @@
+<!-- 10) გააკეთე ნავიგაციის მენიუ, სადაც hover-ზე ლინკი ოდნავ გაიზრდება და ქვემოდან ზემოთ ამოვა. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            body {
+            margin: 0;
+        }
+        .nav {
+            background-color: #222;
+            padding: 20px;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            display: inline-block;
+            transform: translateY(10px) scale(1); /* ოდნავ ქვემოთ */
+            transition: transform 0.3s ease;
+        }
+        .nav a:hover {
+            transform: translateY(0) scale(1.1); /* ზემოთ ამოვა და გაიზრდება */
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+</body>
+</html>

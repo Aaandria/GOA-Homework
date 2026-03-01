@@ -1,0 +1,39 @@
+<!-- 6) გააკეთე სურათების გალერეა, სადაც hover-ზე მხოლოდ არჩეული სურათი გაიზრდება, დანარჩენები კი ოდნავ შემცირდება. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery {
+            display: flex;
+            gap: 15px;
+            width: 800px;
+        }
+
+        .gallery div {
+            width: 200px;
+            height: 150px;
+            background-color: red;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .gallery:hover div {
+            transform: scale(0.9);
+        }
+        .gallery div:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>

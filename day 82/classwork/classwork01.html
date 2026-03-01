@@ -1,0 +1,28 @@
+<!-- 2) გააკეთე ტექსტი, რომელიც მაუსის მიყვანისას (hover) ოდნავ გაიზრდება ზომაში. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+        }
+        p{
+            cursor: pointer;
+            transition: 0.5s;
+            position: relative;
+            left: 50%;
+            top: 50%
+        }
+        p:hover{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p>Hover!!!</p>
+</body>
+</html>

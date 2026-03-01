@@ -1,0 +1,30 @@
+<!-- 5) შექმენი ელემენტი, რომელიც hover-ზე ოდნავ შემცირდება და შემდეგ ნელა დაბრუნდება საწყის ზომაზე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin-top:50px;
+        }
+        .box:hover{
+            animation: shrink 1s ease;
+        }
+        @keyframes shrink{
+            0%{transform: scale(1);}
+            50%{transform: scale(0.8);}
+            100%{transform: scale(1);}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

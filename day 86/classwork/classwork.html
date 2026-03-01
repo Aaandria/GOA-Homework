@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- 1) შექმენი ბლოკი რომელსაც ექნება ჩრდილი (shadow). სცადე სხვადასხვა ზომის ჩრდილები და შეადარე ვიზუალურად. -->
+    
+    <div class="w-48 h-24 bg-white shadow-sm inline-flex items-center justify-center">
+      shadow-sm
+    </div>
+
+    <div class="w-48 h-24 bg-white shadow-md inline-flex items-center justify-center">
+      shadow-md
+    </div>
+
+    <div class="w-48 h-24 bg-white shadow-2xl inline-flex items-center justify-center">
+      shadow-2xl
+    </div>
+
+    <!-- 2) გააკეთე ბარათი (card) სადაც გამოყენებულია ფონის gradient. ტექსტი უნდა იყოს მკაფიო და წაკითხვადი. -->
+
+    <div class="w-80 p-6 rounded-xl bg-gradient-to-r from-blue-500 to-green-500 text-white">
+        <h2 class="text-xl mb-2">Gradient Card</h2>
+    </div>
+
+    <!-- 3) შექმენი ღილაკი რომელსაც ექნება მომრგვალებული კუთხეები (rounded). სცადე სხვადასხვა დონე — მცირედან სრულ წრემდე. -->
+
+    <button class="px-5 py-2 bg-blue-600 text-white rounded-md">
+      Small Radius
+    </button>
+
+    <button class="px-5 py-2 bg-blue-600 text-white rounded-xl">
+      Medium Radius
+    </button>
+
+    <button class="px-5 py-2 bg-blue-600 text-white rounded-full">
+      Full Round
+    </button>
+
+    <!-- 4) გააკეთე ბლოკი, რომელიც hover-ზე შეიცვლის ფერს. დამატებით შეცვალე ტექსტის ფერიც hover მდგომარეობაში. -->
+    
+    <div class="w-48 h-24 flex items-center justify-center bg-green-500 text-white 
+               hover:bg-red-500 hover:text-yellow-300">
+    Hover Me
+  </div>
+
+    <!-- 5) დაამატე transition ეფექტი ღილაკზე ისე, რომ hover-ის დროს ფერის ცვლილება იყოს плавный (არ იყოს მკვეთრი). სცადე სხვადასხვა სიჩქარე. -->
+
+    <button class="px-6 py-2 bg-blue-600 text-white rounded-lg 
+                   transition duration-150 hover:bg-red-500">
+      Fast (150ms)
+    </button>
+
+    <button class="px-6 py-2 bg-green-600 text-white rounded-lg 
+                   transition duration-300 hover:bg-purple-500">
+      Medium (300ms)
+    </button>
+
+    <button class="px-6 py-2 bg-gray-800 text-white rounded-lg 
+                   transition duration-700 hover:bg-yellow-500 hover:text-black">
+        Slow (700ms)
+    </button>
+
+    <!-- 6) შექმენი responsive ბლოკი, რომელიც მობილურზე ერთ სვეტად გამოჩნდება, ხოლო დიდ ეკრანზე ორ ან სამ სვეტად. -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
+        <div class="bg-white p-6 shadow-md rounded-xl">Block 1</div>
+        <div class="bg-white p-6 shadow-md rounded-xl">Block 2</div>
+        <div class="bg-white p-6 shadow-md rounded-xl">Block 3</div>
+
+    </div>
+
+    <!-- 7) გააკეთე grid განლაგება 6 ელემენტით. სხვადასხვა ეკრანზე სვეტების რაოდენობა უნდა იცვლებოდეს. -->
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+    
+        <div class="bg-blue-500 text-white p-6 text-center rounded-lg">1</div>
+        <div class="bg-blue-500 text-white p-6 text-center rounded-lg">2</div>
+        <div class="bg-blue-500 text-white p-6 text-center rounded-lg">3</div>
+        <div class="bg-blue-500 text-white p-6 text-center rounded-lg">4</div>
+        <div class="bg-blue-500 text-white p-6 text-center rounded-lg">5</div>
+        <div class="bg-blue-500 text-white p-6 text-center rounded-lg">6</div>
+
+    </div>
+
+    <!-- 8) შექმენი flex კონტეინერი, სადაც ელემენტები განლაგდება ჰორიზონტალურად და იქნება სივრცე მათ შორის. -->
+
+    <div class="flex space-x-6 bg-black p-6 rounded-xl">
+        <div class="bg-blue-500 text-white px-4 py-2 rounded">Item 1</div>
+        <div class="bg-green-500 text-white px-4 py-2 rounded">Item 2</div>
+        <div class="bg-red-500 text-white px-4 py-2 rounded">Item 3</div>
+    </div>
+
+    <!-- 9) გააკეთე flex განლაგება, სადაც ელემენტები ცენტრში იქნება განთავსებული როგორც ჰორიზონტალურად, ასევე ვერტიკალურად. -->
+
+    <div class="flex items-center justify-center h-64 bg-red-500 rounded-xl">
+        <div class="bg-purple-500 text-white px-6 py-3 rounded">Centered Item</div>
+    </div>
+
+    <!-- 10) შექმენი ბარათების grid, სადაც თითოეულ ბარათს ექნება rounded კუთხეები, shadow, hover ეფექტი და transition. -->
+
+     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    
+    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition transform duration-300">
+      <h3 class="text-lg font-bold mb-2">Card 1</h3>
+      <p class="text-gray-700">ეს არის ბარათი Tailwind-ის გამოყენებით.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl hover:scale-105 transition transform duration-300">
+      <h3 class="text-lg font-bold mb-2">Card 2</h3>
+      <p class="text-gray-700">Hover და transition ეფექტი დამატებულია.</p>
+    </div>
+    </div>
+</body>
+</html>
