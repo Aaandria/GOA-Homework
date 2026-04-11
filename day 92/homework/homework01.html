@@ -1,0 +1,21 @@
+<!-- 2) შექმენი ღილაკი, რომელსაც აქვს icon და ტექსტი.
+როდესაც მაუსს მიიტან მთლიან ღილაკზე:
+icon ოდნავ გადაადგილდეს მარჯვნივ
+ტექსტი გახდეს უფრო მუქი
+გამოიყენე group-hover. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <button class="bg-blue-500 text-white px-4 py-2 rounded-lg flex items-center group">
+        <p class="group-hover:translate-x-1 transition-transform duration-300">=></p>
+        <span class="group-hover:text-gray-300 transition-colors duration-300">Click Me</span>
+    </button>
+</body>
+</html>

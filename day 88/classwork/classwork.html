@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <p class="text-center text-xl">classwork 1</p>
+    <!-- 1) შექმენი 6 ბარათის (card) სექცია. მობილურზე იყოს 1 სვეტი, ტაბლეტზე 2 სვეტი, ხოლო desktop-ზე 3 სვეტი.
+    გამოიყენე grid, grid-cols-1, md:grid-cols-2, lg:grid-cols-3. ბარათებს დაუმატე shadow, rounded-xl, p-4.
+    დამატებით გააკეთე ისე, რომ xl ზომაზე 4 სვეტი გახდეს. -->
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-5">
+        <div class="bg-gray-300 h-40 rounded-xl shadow-md p-4">Card 1</div>
+        <div class="bg-gray-300 h-40 rounded-xl shadow-md p-4">Card 2</div>
+        <div class="bg-gray-300 h-40 rounded-xl shadow-md p-4">Card 3</div>
+        <div class="bg-gray-300 h-40 rounded-xl shadow-md p-4">Card 4</div>
+        <div class="bg-gray-300 h-40 rounded-xl shadow-md p-4">Card 5</div>
+        <div class="bg-gray-300 h-40 rounded-xl shadow-md p-4">Card 6</div>
+    </div>
+
+    <p class="text-center text-xl mb-5">classwork 2</p>
+    <!-- 2) შექმენი ელემენტი (მაგალითად წრე ან ღილაკი), რომელსაც ექნება animate-bounce. 
+     დაუმატე hover-ზე ფერის შეცვლა (hover:bg-blue-500). დამატებითი პირობა: mobile-ზე bounce მუშაობდეს, 
+     მაგრამ desktop-ზე არა (გამოიყენე responsive utility-ები). -->
+
+    <div class="animate-bounce md:animate-none hover:bg-blue-500 w-16 h-16 rounded-full bg-red-500 mx-auto"></div>
+
+    <p class="text-center text-xl">classwork 3</p>
+    <!-- 3) შექმენი loader სამი პატარა წრით ერთმანეთის გვერდით (flex gap-2). თითოეულს ჰქონდეს 
+     animate-pulse და rounded-full. დაუმატე სხვადასხვა ზომა (w-3 h-3, w-4 h-4, w-5 h-5) და გააკეთე
+      რომ ცენტრში იყოს განლაგებული (flex justify-center items-center h-screen). -->
+    <div class="flex justify-center items-center h-screen gap-2">
+        <div class="animate-pulse rounded-full w-3 h-3 bg-gray-500"></div>
+        <div class="animate-pulse rounded-full w-4 h-4 bg-gray-500"></div>
+        <div class="animate-pulse rounded-full w-5 h-5 bg-gray-500"></div>
+    </div>
+
+    <p class="text-center text-xl">classwork 4</p>
+    <!-- 4) შექმენი გვერდის layout sidebar-ით. გამოიყენე flex. Sidebar-ს მიეცი w-64, min-h-screen, 
+     განსხვავებული ფონი და მენიუს ელემენტებს დაუმატე hover:bg-gray-200 და cursor-pointer. მთავარი კონტენტი იყოს flex-1 p-6. -->
+
+    <div class="flex">
+        <div class="w-64 min-h-screen bg-gray-800 text-white p-4">
+            <p class="mb-2 cursor-pointer hover:bg-gray-200 hover:text-black p-2 rounded">Home</p>
+            <p class="mb-2 cursor-pointer hover:bg-gray-200 hover:text-black p-2 rounded">About</p>
+            <p class="mb-2 cursor-pointer hover:bg-gray-200 hover:text-black p-2 rounded">Services</p>
+            <p class="mb-2 cursor-pointer hover:bg-gray-200 hover:text-black p-2 rounded">Contact</p>
+        </div>
+        <div class="flex-1 p-6">
+            <h1 class="text-2xl font-bold mb-4">Main Content</h1>
+            <p>This is the main content area. You can add text, images, or any other elements here.</p>
+        </div>
+    </div>
+
+    <p class="text-center text-xl">classwork 5</p>
+    <!-- 5) შექმენი card, რომელსაც hover-ზე ექნება transform, rotate-3, scale-105 და transition duration-300. 
+     hover-ზე ჩრდილიც გაიზარდოს (hover:shadow-2xl). დაამატე რომ ტექსტიც ოდნავ ზემოთ აიწიოს (hover:-translate-y-2). -->
+
+    <div class="flex justify-center h-screen items-center">
+        <div class="bg-gray-200 w-64 h-64 rounded-xl shadow-md p-4 transform transition duration-300 
+        hover:rotate-3 hover:scale-105 hover:shadow-2xl hover:-translate-y-2">
+            <p class="text-center">Hover me!</p>
+        </div>
+    </div>
+    <p class="text-center text-xl">classwork 6</p>
+    <!-- 6) შექმენი ღილაკი icon-ით. hover-ზე icon დატრიალდეს 180 გრადუსით (hover:rotate-180). 
+     გამოიყენე transition-transform duration-500. დამატებით active-ზე დაამატე scale-90,
+      ხოლო hover-ზე ღილაკის ფერი შეიცვალოს. -->
+
+    <div class="flex justify-center items-center h-screen">
+        <button class="flex items-center bg-green-500 text-white px-4 py-2 rounded transition-transform duration-500 
+        hover:bg-green-700 active:scale-90">
+        <img src="Screenshot 2026-03-01 205931.png" class="rounded-full hover:rotate-180 
+        transition-transform duration-500 w-6 h-6 mr-2" alt="Icon">
+            Click Me
+        </button>
+    </div>
+
+    <p class="text-center text-xl">classwork 7</p>
+    <!-- 7)აწყეთ გაკვეთილზე, როგორც გაჩვენეთ მაგდაგვარი sidebar დატვირთეთ მეტი ფუნქცით  და ასევე დაამატეთ მეტი content-ი  main-ში. -->
+    <div class="flex">
+        <div class="w-64 min-h-screen bg-gray-800 text-white p-4 flex flex-col">
+            <a href="#main" class="mb-2 cursor-pointer hover:bg-gray-200 hover:text-black p-2 rounded">Home</a>
+            <a href="#about" class="mb-2 cursor-pointer hover:bg-gray-200 hover:text-black p-2 rounded">About</a>
+            <a href="#services" class="mb-2 cursor-pointer hover:bg-gray-200 hover:text-black p-2 rounded">Services</a>
+            <a href="#" class="mb-2 cursor-pointer hover:bg-gray-200 hover:text-black p-2 rounded">Contact</a>
+            <a href="#" class="mb-2 cursor-pointer hover:bg-gray-200 hover:text-black p-2 rounded">Blog</a>
+            <a href="#image" class="mb-2 cursor-pointer hover:bg-gray-200 hover:text-black p-2 rounded">Portfolio</a>
+        </div>
+        <div class="flex-1 p-6">
+            <h1 class="text-2xl font-bold mb-4" id="main">Main Content</h1>
+            <p id="about">This is the main content area. You can add text, images, or any other elements here.</p>
+            <p id="services">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+                 ut labore et dolore magna aliqua.</p>
+            <img src="Screenshot 2026-03-01 210504.png" class="mt-4 w-auto h-100 rounded" id="image">
+        </div>
+    </div>
+</body>
+</html>

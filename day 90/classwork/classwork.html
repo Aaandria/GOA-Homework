@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <p class="text-lg text-center">classwork 1</p>
+    <!-- 1) შექმენი flex container 3 ელემენტით. ელემენტებს მიეცი განსხვავებული ფერები, 
+     padding და მრგვალი კიდეები. გამოიყენე flex alignment: space-between და center. -->
+    <div class="flex justify-between items-center p-4">
+        <div class="bg-red-500 text-white p-[20px] rounded-lg">Element 1</div>
+        <div class="bg-green-500 text-white p-[20px] rounded-lg">Element 2</div>
+        <div class="bg-blue-500 text-white p-[20px] rounded-lg">Element 3</div>
+    </div>
+
+    <p class="text-lg text-center">classwork 2</p>
+    <!-- 2) შექმენი grid layout 6 ბარათით. მობილურზე 1 სვეტი, პლანშეტზე (tablet) 2 სვეტი, 
+     desktop-ზე 3 სვეტი. დაამატე spacing და ჩრდილი (shadow). -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        <div class="bg-gray-300 h-[160px] rounded-lg shadow-md p-[20px]">Card 1</div>
+        <div class="bg-gray-300 h-[160px] rounded-lg shadow-md p-[20px]">Card 2</div>
+        <div class="bg-gray-300 h-[160px] rounded-lg shadow-md p-[20px]">Card 3</div>
+        <div class="bg-gray-300 h-[160px] rounded-lg shadow-md p-[20px]">Card 4</div>
+        <div class="bg-gray-300 h-[160px] rounded-lg shadow-md p-[20px]">Card 5</div>
+        <div class="bg-gray-300 h-[160px] rounded-lg shadow-md p-[20px]">Card 6</div>
+    </div>
+
+    <p class="text-lg text-center">classwork 3</p>
+    <!-- 3) შექმენი responsive text positioning div-ებში. ტექსტი იყოს 
+     centered მობილურზე, მარცხნივ ტაბლეტზე და მარჯვნივ desktop-ზე. -->
+    <div class="p-4">
+        <p class="text-center md:text-left lg:text-right">This text changes position based on screen size.</p>
+    </div>
+
+    <p class="text-lg text-center">classwork 4</p>
+    <!-- 4) გამოიყენე arbitrary values div-ის ზომებისთვის (width, height), padding, margin და background color. -->
+    <div class="w-[300px] h-[150px] bg-purple-500 p-[30px] m-[20px] rounded-lg text-white">
+        This div uses arbitrary values for width, height, padding, and margin.
+    </div>
+
+    <p class="text-lg text-center">classwork 5</p>
+    <!-- 5) შექმენი stacked elements with z-index 3 სხვადასხვა ზომის ელემენტით, სხვადასხვა ფერებით, 
+     ისე რომ ზედა ელემენტი დაფარავდეს ქვედა ელემენტებს. -->
+    <div class="relative p-4 h-screen">
+        <div class="bg-red-500 text-white p-[20px] rounded-lg z-10 absolute w-screen  left-0 text-center">Element 1</div>
+        <div class="bg-green-500 text-white p-[20px] rounded-lg z-20 absolute top-[60px] left-0 w-screen text-center">Element 2</div>
+        <div class="bg-blue-500 text-white p-[20px] rounded-lg z-30 absolute top-[100px] left-0 w-screen text-center">Element 3</div>
+    </div>
+</body>
+</html>

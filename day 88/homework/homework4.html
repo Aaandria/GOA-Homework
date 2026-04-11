@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <p class="text-center text-xl">homework 4</p>
+    <!-- 4) შექმენი responsive sidebar layout:
+        Desktop-ზე sidebar ფიქსირებული იყოს მარცხნივ (fixed)
+        Content-ს ჰქონდეს ml-64
+        Mobile-ზე sidebar იყოს -translate-x-full და ღილაკზე დაჭერისას გამოჩნდეს
+        Sidebar-ს ჰქონდეს smooth transition (transition-all duration-300)
+        დამატებითი პირობა: აქტიურ მენიუს ელემენტს ჰქონდეს განსხვავებული ფონი და მარცხენა border (border-l-4). -->
+    <div class="flex">  
+        <div class="fixed top-0 left-0 w-64 h-full bg-gray-800 text-white transform-translate-x-full 
+        md:translate-x-0 transition-all duration-300">
+            <ul class="mt-10">
+                <li class="px-4 py-2 hover:bg-gray-700 hover:border-l-4 hover:border-blue-500">Home</li>
+                <li class="px-4 py-2 hover:bg-gray-700 hover:border-l-4 hover:border-blue-500">About</li>
+                <li class="px-4 py-2 hover:bg-gray-700 hover:border-l-4 hover:border-blue-500">Services</li>
+                <li class="px-4 py-2 hover:bg-gray-700 hover:border-l-4 hover:border-blue-500">Contact</li>
+            </ul>
+        </div>
+        <div class="ml-64 p-6">
+            <h1 class="text-2xl font-bold mb-4">Content Area</h1>
+            <p>This is the main content area. Click the button to toggle the sidebar on mobile.</p>
+        </div>
+    </div>
+</body>
+</html>

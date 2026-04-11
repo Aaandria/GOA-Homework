@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A',
+                        secondary: '#FBBF24',
+                        accent: '#10B981',
+                        'tooltip-bg': '#1E293B',
+                        'tooltip-text': '#F8FAFC'
+                    },
+                    spacing: {
+                        'tooltip-horizontal': '0.5rem',
+                        'tooltip-vertical': '0.25rem'
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-slate-50 min-h-screen py-8">
+    <p class="text-center text-2xl font-bold mb-6">classwork 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8</p>
+        <!-- 1) შექმენი form TailwindCSS-ის გამოყენებით, სადაც გამოიყენებ Floating Label Input-ს (peer magic). 
+         ფორმა უნდა შეიცავდეს მინიმუმ 2-3 input-ს (მაგ: name, email, password). გამოიყენე peer კლასი, 
+         რომ label რეაგირებდეს input-ის მდგომარეობაზე და გააკეთე ლამაზი UI.
+        4) tailwind.config.js-ში დაამატე custom ფერები 
+        5) შექმენი tooltip კომპონენტი TailwindCSS-ით, რომელიც გამოჩნდება hover და focus დროს
+        6) tooltip დამალული იყოს default-ზე (opacity-0, invisible)
+        7) hover ან focus დროს გამოჩნდეს (group-hover, group-focus)
+        8) ailwind.config.js-ში გააფართოვე theme.extend და დაამატე custom spacing tooltip-ისთვის.
+        დაამატე custom colors (tooltip-bg, tooltip-text) -->
+    <div class="max-w-xl mx-auto p-6 bg-white rounded-xl shadow-lg">
+        
+        <form class="space-y-6">
+            <div class="relative group">
+                <input id="name" name="name" type="text" required title="Enter your full name"
+                    class="peer h-11 w-full border-b-2 border-slate-300 bg-transparent px-0 text-gray-900 
+                    placeholder-transparent focus:outline-none focus:border-blue-500"
+                    placeholder="Name"/>
+                <label for="name"
+                    class="absolute left-0 -top-1.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 
+                    peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-1.5 
+                    peer-focus:text-sm peer-focus:text-blue-500">
+                    Name
+                </label>
+                <span class="absolute right-0 top-2 z-10 rounded bg-tooltip-bg text-tooltip-text px-tooltip-horizontal 
+                py-tooltip-vertical text-xs opacity-0 invisible 
+                transition-all duration-200 group-hover:opacity-100 group-hover:visible group-focus-within:opacity-100 
+                group-focus-within:visible">
+                    Tooltip: use your full name
+                </span>
+            </div>
+            <div class="relative group">
+                <input id="email" name="email" type="email" required title="Enter a valid email"
+                    class="peer h-11 w-full border-b-2 border-slate-300 bg-transparent px-0 text-gray-900 
+                    placeholder-transparent focus:outline-none focus:border-blue-500"
+                    placeholder="Email" />
+                <label for="email"
+                    class="absolute left-0 -top-1.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 
+                    peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-1.5 
+                    peer-focus:text-sm peer-focus:text-blue-500">
+                    Email
+                </label>
+                <span class="absolute right-0 top-2 z-10 rounded bg-tooltip-bg text-tooltip-text px-tooltip-horizontal 
+                py-tooltip-vertical text-xs 
+                opacity-0 invisible transition-all duration-200 group-hover:opacity-100 group-hover:visible 
+                group-focus-within:opacity-100 group-focus-within:visible">
+                    Tooltip: format as name@example.com
+                </span>
+            </div>
+            <div class="relative group">
+                <input id="password" name="password" type="password" required title="At least 8 characters"
+                    class="peer h-11 w-full border-b-2 border-slate-300 bg-transparent px-0 text-gray-900 
+                    placeholder-transparent focus:outline-none focus:border-blue-500"
+                    placeholder="Password" />
+                <label for="password"
+                    class="absolute left-0 -top-1.5 text-gray-500 text-sm transition-all peer-placeholder-shown:top-3 
+                    peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:-top-1.5 
+                    peer-focus:text-sm peer-focus:text-blue-500">
+                    Password
+                </label>
+                <span class="absolute right-0 top-2 z-10 rounded bg-tooltip-bg text-tooltip-text px-tooltip-horizontal 
+                py-tooltip-vertical text-xs 
+                opacity-0 invisible transition-all duration-200 group-hover:opacity-100 group-hover:visible 
+                group-focus-within:opacity-100 group-focus-within:visible">
+                    Tooltip: minimum 8 characters
+                </span>
+            </div>
+            <button type="submit"
+                class="w-full rounded-md bg-blue-600 px-4 py-2 text-white font-semibold hover:bg-blue-700 
+                focus:outline-none focus:ring-2 focus:ring-blue-300">
+                Submit
+            </button>
+        </form>
+    </div>
+    
+</body>
+</html>

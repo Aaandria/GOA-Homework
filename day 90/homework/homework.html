@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <p class="text-center text-xl">homework 1</p>
+    <!-- 1) შექმენი flex container 4 ელემენტით. ელემენტები იყოს ცენტრში განლაგებული და ერთმანეთთან 
+     ჰქონდეს თანაბარი დაშორება. თითოეულ ელემენტს მიეცი განსხვავებული background color, padding და rounded კუთხეები. -->
+    <div class="flex justify-around items-center gap-4">
+        <div class="bg-red-500 p-4 rounded">Element 1</div>
+        <div class="bg-green-500 p-5 rounded">Element 2</div>
+        <div class="bg-blue-500 p-6 rounded">Element 3</div>
+        <div class="bg-yellow-500 p-7 rounded">Element 4</div>
+    </div>
+    <p class="text-center text-xl">homework 2</p>
+    <!-- 2) შექმენი grid layout 8 ბარათით.
+    მობილურზე იყოს 2 სვეტი, ტაბლეტზე 3 სვეტი, ხოლო desktop-ზე 4 სვეტი. 
+    ბარათებს დაუმატე shadow, padding და rounded corners. -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <div class="bg-gray-200 p-4 rounded shadow">Card 1</div>
+        <div class="bg-gray-200 p-4 rounded shadow">Card 2</div>
+        <div class="bg-gray-200 p-4 rounded shadow">Card 3</div>
+        <div class="bg-gray-200 p-4 rounded shadow">Card 4</div>
+        <div class="bg-gray-200 p-4 rounded shadow">Card 5</div>
+        <div class="bg-gray-200 p-4 rounded shadow">Card 6</div>
+        <div class="bg-gray-200 p-4 rounded shadow">Card 7</div>
+        <div class="bg-gray-200 p-4 rounded shadow">Card 8</div>
+    </div>
+    <p class="text-center text-xl">homework 3</p>
+    <!-- 3) შექმენი responsive ტექსტის ზომა.
+    ტექსტი მობილურზე იყოს პატარა, ტაბლეტზე საშუალო ზომის, 
+    ხოლო desktop-ზე დიდი. ასევე ტექსტი იყოს bold. -->
+    <p class="text-center text-[16px] sm:text-[32px] md:text-[64px] font-bold">Responsive Text</p>
+    <p class="text-center text-xl">homework 4</p>
+    <!-- 4) შექმენი div arbitrary values გამოყენებით, სადაც width და height 
+     იქნება custom მნიშვნელობებით. ასევე გამოიყენე arbitrary margin და padding. -->
+    <div class="w-[200px] h-[100px] m-[5px] p-[5px] bg-blue-500 rounded">Custom Div</div>
+    <p class="text-center text-xl">homework 5</p>
+    <!-- 5) შექმენი overlay ელემენტი:
+    ერთი დიდი ელემენტი იყოს ქვედა ფენაში და მეორე პატარა ელემენტი 
+    ზემოდან, ისე რომ ნაწილობრივ ფარავდეს ქვედას. -->
+    <div class="relative w-[300px] h-[200px] bg-gray-300 rounded z-0"></div>
+    <div class="relative bottom-[200px] left-0 w-[350px] h-[100px] bg-red-500 opacity-75 rounded z-1000"></div>
+    <p class="text-center text-xl">homework 6</p>
+    <!-- 6) შექმენი flex layout with wrapping 7 ელემენტით.
+    როცა ადგილი აღარ იქნება, ელემენტები უნდა გადავიდნენ ახალ ხაზზე. 
+    თითოეულ ელემენტს მიეცი background color და padding. -->
+    <div class="flex flex-wrap justify-content items-center gap-4 h-screen">
+        <div class="bg-red-500 p-4 rounded">Element 1</div>
+        <div class="bg-green-500 p-5 rounded">Element 2</div>
+        <div class="bg-blue-500 p-6 rounded">Element 3</div>
+        <div class="bg-yellow-500 p-7 rounded">Element 4</div>
+        <div class="bg-purple-500 p-8 rounded">Element 5</div>
+        <div class="bg-pink-500 p-9 rounded">Element 6</div>
+        <div class="bg-indigo-500 p-10 rounded">Element 7</div>
+    </div>
+    <p class="text-center text-xl">homework 7</p>
+    <!-- 7) შექმენი grid gallery 9 ელემენტით.
+    მობილურზე იყოს 3 სვეტი, ტაბლეტზე 4 სვეტი, ხოლო desktop-ზე 5 სვეტი. 
+    ელემენტებს დაუმატე gap და hover effect. -->
+    <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 h-screen">
+        <div class="bg-gray-200 p-4 rounded shadow hover:shadow-lg">Card 1</div>
+        <div class="bg-gray-200 p-4 rounded shadow hover:shadow-lg">Card 2</div>
+        <div class="bg-gray-200 p-4 rounded shadow hover:shadow-lg">Card 3</div>
+        <div class="bg-gray-200 p-4 rounded shadow hover:shadow-lg">Card 4</div>
+        <div class="bg-gray-200 p-4 rounded shadow hover:shadow-lg">Card 5</div>
+        <div class="bg-gray-200 p-4 rounded shadow hover:shadow-lg">Card 6</div>
+        <div class="bg-gray-200 p-4 rounded shadow hover:shadow-lg">Card 7</div>
+        <div class="bg-gray-200 p-4 rounded shadow hover:shadow-lg">Card 8</div>
+        <div class="bg-gray-200 p-4 rounded shadow hover:shadow-lg">Card 9</div>
+    </div>
+</body>
+</html>

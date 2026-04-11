@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E3A8A', 
+                        secondary: '#FBBF24',
+                        accent: '#10B981',
+                        primary: ' #EF4444'
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body>
+    <!-- 1) შექმენი მარტივი ფორმა 3 სექციით:
+            ინფორმაცია (სახელი, გვარი)
+            კონტაქტი (email, ტელეფონი)
+            დამატებითი ინფორმაცია (textarea)
+            ფორმას გაუკეთე ლამაზი დიზაინი Tailwind-ით (spacing, border, focus effects). -->
+    <!-- 2) იმავე ფორმაში დაამატე input-ებზე focus ეფექტები (მაგ. focus:ring, focus:border) და შეცვალე ფერები შენი custom theme-დან. -->
+    <!-- 3) ფორმის ბოლოში დაამატე submit ღილაკი, რომელსაც ექნება hover და active ეფექტები
+           (scale, color change). ასევე გამოიყენე transition, რომ ანიმაცია იყოს გლუვი. -->
+    <!-- 4) დაამატე Tailwind config-ში ორი ახალი ფერი . შემდეგ შექმენი სამი ბლოკი (div),
+            სადაც თითოეულს ექნება განსხვავებული background (primary, secondary, accent) და ტექსტი. 
+            თითოეულზე დაამატე hover ეფექტი, რომ ფერი ოდნავ შეიცვალოს. -->
+    <!-- 5) შეცვალე არსებული primary ფერი სხვა მნიშვნელობით (მაგ. მწვანე ან წითელი) და 
+     შეამოწმე როგორ იცვლება უკვე გამოყენებული დიზაინი. დაამატე კიდევ ერთი ელემენტი (button), 
+     რომელიც იყენებს ამ ახალ ფერს. -->
+    <!-- 6) შექმენი სურათების გალერეა (3-4 სურათი), სადაც თითოეულ სურათზე გამოიყენებ Tailwind-ის filters (მაგ. blur, grayscale,
+      brightness). დაამატე hover ეფექტები ისე, რომ მაუსის მიტანისას filter შეიცვალოს (მაგ. blur გაქრეს ან brightness გაიზარდოს). -->
+    <p class="text-center text-xl font-bold">classwork 1 & 2 & 3</p>
+    <form class="max-w-md mx-auto bg-white p-6 rounded-lg shadow-md h-screen">
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="first-name">სახელი</label>
+            <input class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            type="text" id="first-name" name="first-name">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="last-name">გვარი</label>
+            <input class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            type="text" id="last-name" name="last-name">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">email</label>
+            <input class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            type="email" id="email" name="email">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">ტელეფონი</label>
+            <input class="w-full px-3 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" 
+            type="tel" id="phone" name="phone">
+        </div>
+        <div class="mb-4">
+            <label class="block text-gray-700 text-sm font-bold mb-2" for="additional-info">დამატებითი ინფორმაცია</label>
+            <textarea class="w-full h-50 px-3 py-2 border rounded focus:outline-none focus:ring-2
+             focus:ring-blue-500" id="additional-info" name="additional-info"></textarea>
+        </div>
+        <button class="bg-blue-500 cursor-pointer hover:bg-blue-700 text-white font-bold py-2 px-4 
+        rounded focus:outline-none focus:shadow-outline" type="submit">Submit</button>
+    </form>
+
+    <p class="text-center text-xl font-bold">classwork 4</p>
+    
+    <div class="max-w-md mx-auto space-y-4">
+        <div class="bg-primary text-white p-4 rounded hover:bg-blue-700 transition-colors duration-300">Primary Block</div>
+        <div class="bg-secondary text-white p-4 rounded hover:bg-yellow-500 transition-colors duration-300">Secondary Block</div>
+        <div class="bg-accent text-white p-4 rounded hover:bg-green-500 transition-colors duration-300">Accent Block</div>
+    </div>
+    <p class="text-center text-xl font-bold">classwork 5</p>
+    <button class="bg-primary text-white font-bold py-2 px-4 rounded hover:bg-red-700 transition-colors duration-300">Primary Button</button>
+    <p class="text-center text-xl font-bold">classwork 6</p>
+    <div class="max-w-md mx-auto grid grid-cols-2 gap-4">
+        <img class="w-full h-auto filter blur-sm hover:blur-none transition-filter duration-300" 
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60">
+        <img class="w-full h-auto filter grayscale hover:grayscale-0 transition-filter duration-300" 
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60">
+        <img class="w-full h-auto filter brightness-75 hover:brightness-100 transition-filter duration-300" 
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60">
+        <img class="w-full h-auto filter blur-sm hover:blur-none transition-filter duration-300" 
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FyfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60">
+    </div>
+</body>
+</html>

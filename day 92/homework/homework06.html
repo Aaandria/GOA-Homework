@@ -1,0 +1,24 @@
+<!-- 3) შექმენი password input.
+თუ input ცარიელია:
+ქვემოთ გამოჩნდეს ტექსტი "Password is required" წითელი ფერით
+თუ მომხმარებელი რამეს დაწერს:
+ტექსტი გაქრეს
+გამოიყენე peer utilities. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="relative">
+        <input type="password" class="peer border p-2 rounded w-full" placeholder="Enter your password">
+        <p class="text-red-500 mt-1 absolute left-0 top-full opacity-0 peer-placeholder-shown:opacity-100">
+            Password is required
+        </p>
+    </div>
+</body>
+</html>

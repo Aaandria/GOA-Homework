@@ -1,0 +1,73 @@
+<!-- 1)შექმენი Signup Modal TailwindCSS-ის გამოყენებით. Modal თავიდან იყოს დამალული (hidden). 
+ გვერდზე გქონდეს ღილაკი "Sign Up", რომელზე დაჭერისას Modal გამოჩნდება.
+2) Modal-ის შიგნით გააკეთე Signup ფორმა, რომელიც შეიცავს მინიმუმ 3 input-ს: Name, Email, Password. გამოიყენე Tailwind კლასები ლამაზი UI-სთვის.
+3) დაამატე Submit ღილაკი. როდესაც მომხმარებელი დააჭერს Submit-ს:
+არ უნდა მოხდეს გვერდის refresh (event.preventDefault())
+ფორმის მონაცემები წაიკითხე JavaScript-ით
+4) Submit-ზე შექმენი ახალი პატარა შეტყობინების Modal/Box (success message), სადაც ეწერება: "თქვენი ინფორმაცია გაიგზავნა"
+ეს box თავიდან იყოს დამალული და გამოჩნდეს მხოლოდ Submit-ის შემდეგ.
+5) გააკეთე ისე, რომ Signup Modal დაიხუროს Submit-ის შემდეგ და მხოლოდ success message დარჩეს ეკრანზე.
+6) დაამატე ფუნქციონალი, რომ success message გაქრეს:
+ან 3 წამში ავტომატურად (setTimeout)
+ან მომხმარებელმა დააჭიროს "OK" ღილაკს და დაიხუროს -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex h-screen items-center justify-center bg-gray-100">
+
+    <button id="openSignupModal" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded 
+    focus:outline-none focus:shadow-outline">
+        Sign Up
+    </button>
+
+    <div id="signupModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-[400px]">
+            <h2 class="text-xl font-bold mb-4">Sign Up</h2>
+            <form id="signupForm">
+                <div class="mb-4 relative">
+                    <input type="text" id="name" class="peer border-b-2 border-black appearance-none w-full 
+                    py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500" placeholder="">
+                    <label for="name" class="block absolute top-2 left-3 text-gray-700 text-sm font-bold mb-2 peer-focus:
+                    text-blue-500 peer-focus:top-[-15px] peer-focus:left-0 peer-focus:text-xs transition-all duration-200">Name</label>
+                </div>
+                <div class="mb-4 relative">
+                    <input type="email" id="email" class="peer border-b-2 border-black appearance-none
+                     w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500" placeholder="">
+                    <label for="email" class="block absolute top-2 left-3 text-gray-700 text-sm font-bold mb-2 peer-focus:
+                    text-blue-500 peer-focus:top-[-15px] peer-focus:left-0 peer-focus:text-xs transition-all duration-200">Email</label>
+                </div>
+                <div class="mb-4 relative">
+                    <input type="password" id="password" class="peer border-b-2 border-black appearance-none 
+                    w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:border-blue-500" placeholder="">
+                    <label for="password" class="block absolute top-2 left-3 text-gray-700 text-sm font-bold mb-2 peer-focus:
+                    text-blue-500 peer-focus:top-[-15px] peer-focus:left-0 peer-focus:text-xs transition-all duration-200">Password</label>
+                </div>
+                <div class="flex items-center justify-between">
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white 
+                    font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="successModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-green-100 p-6 rounded-lg shadow-lg w-[300px] text-center">
+            <p class="text-green-700 text-lg font-bold mb-4">თქვენი ინფორმაცია გაიგზავნა</p>
+            <button id="closeSuccessModal" class="bg-green-500 hover:bg-green-700 text-white font-bold 
+            py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                OK
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- 1) შექმენი Modal ფანჯარა TailwindCSS-ით.
+    ღილაკზე დაკლიკებისას უნდა გაიხსნას Modal.
+    Modal-ს უნდა ჰქონდეს:
+    overlay (შავი ნახევრად გამჭვირვალე ფონით)
+    close ღილაკი
+    title
+    2) წინა დავალებას დაამატე, Modal-ის გარეთ დაკლიკებისას დაიხუროს
+    3) დაამატე ანიმაციები და ლოგიკა:
+    გახსნისას: opacity-0 → opacity-100, scale-95 → scale-100
+    დახურვისას: ანიმაციით გაქრობა -->
+
+    <p class="text-center text-xl font-bold">classwork 1 & 2 & 3</p>
+    <div class="h-screen flex">
+        <div class="m-auto">
+            <button id="openModal" class="px-4 py-2 bg-blue-500 text-white rounded">Open Modal</button>
+            <div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center
+             opacity-0 pointer-events-none transition-opacity duration-300">
+                <div class="bg-white rounded-lg p-6 relative w-96 scale-95 transition-transform duration-300">
+                    <h2 class="text-xl font-bold mb-4">Modal Title</h2>
+                    <p class="mb-4">This
+                        is a simple modal. Click the close button to dismiss.</p>
+                    <button id="closeModal" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">x</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const open = document.getElementById('openModal');
+        const close = document.getElementById('closeModal');
+        const modal = document.getElementById('modal');
+        const modalContent = modal.querySelector('div');
+        
+        open.addEventListener('click', () => {
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100');
+            modalContent.classList.remove('scale-95');
+            modalContent.classList.add('scale-100');
+        });
+        
+        close.addEventListener('click', () => {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.classList.remove('opacity-100');
+            modalContent.classList.add('scale-95');
+            modalContent.classList.remove('scale-100');
+        });
+    </script>
+
+    
+</body>
+</html>
