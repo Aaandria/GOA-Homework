@@ -1,0 +1,64 @@
+<!-- 1.შექმენი თამაში სადაც მომხმარებელი აჭერს start ღილაკს და ეკრანზე ჩნდება ტექსტი "Get Ready...", 
+ გარკვეული დროის შემდეგ ჩნდება "GO!" და მომხმარებელმა უნდა დააჭიროს ღილაკს რაც შეიძლება სწრაფად, ბოლოს გამოიტანე რეაქციის დრო -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Time Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-100 text-slate-900 flex items-center justify-center">
+    <div class="bg-white rounded-3xl shadow-2xl p-10 w-full max-w-xl text-center">
+        <h1 class="text-3xl font-semibold mb-6">Reaction Time Game</h1>
+        <p id="message" class="text-xl mb-8 min-h-[2rem]">Press Start to begin.</p>
+        <button id="actionButton" class="bg-sky-600 text-white px-8 py-3 rounded-2xl text-lg font-medium 
+        transition transform hover:scale-105 disabled:bg-slate-400 disabled:cursor-not-allowed">Start</button>
+        <p id="result" class="mt-6 text-lg text-slate-700"></p>
+    </div>
+
+    <script>
+        const actionButton = document.getElementById('actionButton');
+        const message = document.getElementById('message');
+        const result = document.getElementById('result');
+
+        let startTime;
+        let timeout;
+
+        actionButton.addEventListener('click', () => {
+            if (actionButton.textContent === 'Start') {
+                startGame();
+            } else if (actionButton.textContent === 'GO!') {
+                endGame();
+            }
+        });
+
+        function startGame() {
+            message.textContent = 'Get Ready...';
+            result.textContent = '';
+            actionButton.disabled = true;
+
+            timeout = setTimeout(() => {
+                message.textContent = 'GO!';
+                actionButton.textContent = 'GO!';
+                actionButton.disabled = false;
+                startTime = Date.now();
+            }, Math.random() * 2000 + 1000);
+        }
+
+        function endGame() {
+            const reactionTime = Date.now() - startTime;
+            result.textContent = `Your reaction time: ${reactionTime} ms`;
+            resetGame();
+        }
+
+        function resetGame() {
+            clearTimeout(timeout);
+            actionButton.textContent = 'Start';
+            actionButton.disabled = false;
+        }
+    </script>
+</body>
+</html>

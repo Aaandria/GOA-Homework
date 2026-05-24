@@ -1,0 +1,110 @@
+<!-- 1.შექმენი ღილაკი Tailwind სტილით, რომელიც მდებარეობს ეკრანის ცენტრში. ღილაკზე 
+დაჭერის შემდეგ ეკრანზე უნდა გამოჩნდეს შემთხვევითი რიცხვი 1-დან 10-მდე.
+
+2.შექმენი Tailwind-ით სტილიზებული კვადრატი (div), რომელიც თავიდან არის პატარა ზომის. 
+მასზე დაჭერისას უნდა გაიზარდოს ზომაში და შემდეგი დაჭერისას ისევ დაუბრუნდეს საწყის ზომას.
+
+3.შექმენი "Like " ღილაკი Tailwind სტილით. ღილაკზე ყოველი დაჭერისას უნდა გაიზარდოს ლაიქების 
+რაოდენობა და ეკრანზე უნდა გამოჩნდეს რამდენი ლაიქია.
+
+4.შექმენი input და ღილაკი Tailwind სტილით. მომხმარებელი input-ში წერს ფერს (მაგ: red, blue, green) 
+და ღილაკზე დაჭერისას უნდა შეიცვალოს მთელი გვერდის background ამ ფრად.
+
+5.შექმენი "Start" ღილაკი Tailwind სტილით. ღილაკზე დაჭერის შემდეგ უნდა დაიწყოს countdown 3-დან 1-მდე, 
+თითოეულ წამში რიცხვი უნდა შეიცვალოს, ხოლო ბოლოს უნდა გამოჩნდეს ტექსტი "Time's up!". -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- classwork 1 -->
+    <p class="text-center font-bold text-xl">Classwork 1</p>
+    <div class="flex flex-col items-center justify-center h-screen space-y-4">  
+        <button id="randomNumberBtn" class="px-4 py-2 bg-blue-500 text-white rounded">Generate Random Number</button>
+        <div id="randomNumberDisplay" class="mt-4 text-xl font-bold"></div>
+    </div>
+    <!-- classwork 2 -->
+    <p class="text-center font-bold text-xl">Classwork 2</p>
+    <div class="flex flex-col items-center justify-center h-screen space-y-4">
+        <div id="square" class="w-16 h-16 bg-red-500 cursor-pointer"></div>
+    </div>
+
+    <!-- classwork 3 -->
+    <p class="text-center font-bold text-xl">Classwork 3</p>
+    <div class="flex flex-col items-center justify-center h-screen space-y-4">
+        <button id="likeBtn" class="px-4 py-2 bg-blue-500 text-white rounded">Like</button>
+        <div id="likeCount" class="mt-4 text-xl font-bold">Likes: 0</div>
+    </div>
+
+    <!-- classwork 4 -->
+    <p class="text-center font-bold text-xl">Classwork 4</p>
+    <div class="flex flex-col items-center justify-center h-screen space-y-4">
+        <input id="colorInput" type="text" placeholder="Enter a color" class="border border-gray-300 rounded px-4 py-2">
+        <button id="colorBtn" class="px-4 py-2 bg-blue-500 text-white rounded">Change Background</button>
+    </div>
+
+    <!-- classwork 5 -->
+    <p class="text-center font-bold text-xl">Classwork 5</p>
+    <div class="flex flex-col items-center justify-center h-screen space-y-4">
+        <button id="startBtn" class="px-4 py-2 bg-blue-500 text-white rounded">Start</button>
+        <div id="countdownDisplay" class="mt-4 text-xl font-bold"></div>
+    </div>
+
+    <script>
+        // Classwork 1
+        const randomNumberBtn = document.getElementById('randomNumberBtn');
+        const randomNumberDisplay = document.getElementById('randomNumberDisplay');
+        // Classwork 2
+        const square = document.getElementById('square');
+        // Classwork 3
+        const likeBtn = document.getElementById('likeBtn');
+        const likeCount = document.getElementById('likeCount');
+        let likes = 0;
+        // Classwork 4
+        const colorBtn = document.getElementById('colorBtn');
+        const colorInput = document.getElementById('colorInput');
+        // Classwork 5
+        const startBtn = document.getElementById('startBtn');
+        const countdownDisplay = document.getElementById('countdownDisplay');
+        // classwork 1 event listener
+        randomNumberBtn.addEventListener('click', () => {
+            const randomNumber = Math.floor(Math.random() * 10) + 1;
+            randomNumberDisplay.textContent = `Random Number: ${randomNumber}`;
+        });
+        //classwork 2 event listener
+        square.addEventListener('click', () => {
+            square.classList.toggle('w-32');
+            square.classList.toggle('h-32');
+        });
+        //classwork 3 event listener
+        likeBtn.addEventListener('click', () => {
+            likes++;
+            likeCount.textContent = `Likes: ${likes}`;
+        });
+        //classwork 4 event listener 
+        colorBtn.addEventListener('click', () => {
+            document.body.style.backgroundColor = colorInput.value;
+        });
+        //classwork 5 event listener
+        
+        startBtn.addEventListener('click', () => {
+            let count = 3;
+            countdownDisplay.textContent = count;
+            const countdownInterval = setInterval(() => {
+                count--;
+                countdownDisplay.textContent = count;
+                if (count === 0) {
+                    clearInterval(countdownInterval);
+                    countdownDisplay.textContent = "Time's up!";
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

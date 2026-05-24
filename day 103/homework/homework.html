@@ -1,0 +1,450 @@
+<!-- 1 შექმენი თამაში სადაც თავიდან წერია Don’t Click თუ მომხმარებელი დააჭერს წააგებს ცოტა ხანში 
+ ტექსტი შეიცვლება Click NOW მომხმარებელმა უნდა დააჭიროს სწრაფად ბოლოს გამოიტანე დრო
+
+2 შექმენი თამაში სადაც არის 5 ღილაკი მხოლოდ ერთი არის სწორი random მომხმარებელმა უნდა დააჭიროს 
+სწორ ღილაკს სწრაფად ბოლოს გამოიტანე სწორია თუ არა და დრო
+
+3 შექმენი თამაში სადაც ეკრანი იცვლის ფერს წითელი მწვანე ლურჯი მომხმარებელმა უნდა დააჭიროს მხოლოდ 
+როცა არის მწვანე თუ სხვა ფერზე დააჭერს შეცდომაა ბოლოს გამოიტანე სწორები და შეცდომები
+
+4 შექმენი თამაში სადაც ღილაკი მოძრაობს ეკრანზე მომხმარებელმა უნდა დააჭიროს რაც შეიძლება ბევრჯერ თამაში 
+გრძელდება 5 წამი ბოლოს გამოიტანე რამდენჯერ დააჭირა
+
+5 შექმენი თამაში სადაც ეკრანზე ჩნდება რიცხვები არეულად 1 დან 10 მდე მომხმარებელმა უნდა დააჭიროს სწორ 
+რიგში ბოლოს გამოიტანე დრო და შეცდომები.
+</body> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind Games</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-950 text-slate-100">
+  <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+    <div class="grid gap-6 xl:grid-cols-2">
+      <!-- Homework 1: Don’t Click / Click NOW -->
+      <section class="rounded-3xl border border-slate-800 bg-slate-900/80 p-6 shadow-xl shadow-slate-900/50">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-semibold text-white">Game 1: Don’t Click / Click NOW</h2>
+            <p class="mt-2 text-sm text-slate-400">Click only after the button changes to Click NOW. 
+                If you click too early, you lose.</p>
+          </div>
+          <span class="rounded-full bg-emerald-500 px-3 py-1 text-sm font-semibold text-slate-950"></span>
+        </div>
+        <div class="mt-6 space-y-4">
+          <button id="game1Button" class="w-full rounded-2xl bg-slate-700 px-5 py-4 text-xl font-semibold 
+          text-white transition hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-60">
+            Don’t Click
+          </button>
+          <div class="flex flex-wrap items-center gap-3">
+            <button id="game1Start" class="rounded-full bg-cyan-500 px-4 py-2 text-sm font-semibold 
+            text-slate-950 transition hover:bg-cyan-400">Start game</button>
+            <button id="game1Reset" class="rounded-full bg-slate-700 px-4 py-2 text-sm font-semibold 
+            text-slate-100 transition hover:bg-slate-600">Reset</button>
+          </div>
+          <p id="game1Message" class="min-h-[2rem] text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Homework 2: Find the Correct Button -->
+      <section class="rounded-3xl border border-slate-800 bg-slate-900/80 p-6 shadow-xl shadow-slate-900/50">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+          <h2 class="text-2xl font-semibold text-white">Game 2: Find the Correct Button</h2>
+            <p class="mt-2 text-sm text-slate-400">Five buttons, one random correct answer. Click quickly to win.</p>
+          </div>
+          <span class="rounded-full bg-violet-500 px-3 py-1 text-sm font-semibold text-slate-950">Speed</span>
+        </div>
+        <div class="mt-6 space-y-4">
+          <div id="game2Buttons" class="grid grid-cols-2 gap-3"></div>
+          <div class="flex flex-wrap items-center gap-3">
+            <button id="game2Start" class="rounded-full bg-violet-500 px-4 py-2 text-sm font-semibold 
+            text-slate-950 transition hover:bg-violet-400">New round</button>
+            <button id="game2Reset" class="rounded-full bg-slate-700 px-4 py-2 text-sm font-semibold 
+            text-slate-100 transition hover:bg-slate-600">Reset</button>
+          </div>
+          <p id="game2Message" class="min-h-[2rem] text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Homework 3: Click Only on Green -->
+      <section class="rounded-3xl border border-slate-800 bg-slate-900/80 p-6 shadow-xl shadow-slate-900/50">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-semibold text-white">Game 3: Click Only on Green</h2>
+            <p class="mt-2 text-sm text-slate-400">The panel changes color. Click only when the color is green.</p>
+          </div>
+          <span class="rounded-full bg-emerald-500 px-3 py-1 text-sm font-semibold text-slate-950">Accuracy</span>
+        </div>
+        <div class="mt-6 space-y-4">
+          <div id="game3Panel" class="rounded-3xl border border-slate-700 p-6 text-center text-xl font-semibold 
+          text-slate-950 transition duration-300">
+            <p id="game3ColorLabel">Waiting...</p>
+          </div>
+          <button id="game3Button" class="w-full rounded-2xl bg-slate-700 px-5 py-4 text-xl font-semibold 
+          text-white transition hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-60">Click Me</button>
+          <div class="flex flex-wrap items-center gap-3">
+            <button id="game3Start" class="rounded-full bg-emerald-500 px-4 py-2 text-sm font-semibold 
+            text-slate-950 transition hover:bg-emerald-400">Start</button>
+            <button id="game3Stop" class="rounded-full bg-slate-700 px-4 py-2 text-sm font-semibold 
+            text-slate-100 transition hover:bg-slate-600">Stop</button>
+          </div>
+          <p id="game3Message" class="min-h-[2rem] text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Homework 4: Moving Button -->
+      <section class="rounded-3xl border border-slate-800 bg-slate-900/80 p-6 shadow-xl shadow-slate-900/50">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-semibold text-white">Game 4: Moving Button</h2>
+            <p class="mt-2 text-sm text-slate-400">Click the moving button as many times as possible in 5 seconds.</p>
+          </div>
+          <span class="rounded-full bg-sky-500 px-3 py-1 text-sm font-semibold text-slate-950">Speed</span>
+        </div>
+        <div class="mt-6 space-y-4">
+          <div id="game4Arena" class="relative h-64 overflow-hidden rounded-3xl border border-slate-700 bg-slate-950/40 p-4">
+            <button id="game4Button" class="absolute rounded-full bg-sky-500 px-5 py-3 text-base font-semibold text-slate-950 
+            shadow-lg shadow-sky-500/30 transition disabled:cursor-not-allowed disabled:opacity-60">Click</button>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <button id="game4Start" class="rounded-full bg-sky-500 px-4 py-2 text-sm font-semibold text-slate-950 
+            transition hover:bg-sky-400">Start</button>
+            <button id="game4Reset" class="rounded-full bg-slate-700 px-4 py-2 text-sm font-semibold text-slate-100 
+            transition hover:bg-slate-600">Reset</button>
+          </div>
+          <p id="game4Message" class="min-h-[2rem] text-sm text-slate-300"></p>
+        </div>
+      </section>
+
+      <!-- Homework 5: Click Numbers 1–10 in Order -->
+      <section class="rounded-3xl border border-slate-800 bg-slate-900/80 p-6 shadow-xl shadow-slate-900/50 xl:col-span-2">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-semibold text-white">Game 5: Click Numbers 1–10 in Order</h2>
+            <p class="mt-2 text-sm text-slate-400">Click the numbers in the correct order as quickly as possible.</p>
+          </div>
+          <span class="rounded-full bg-orange-500 px-3 py-1 text-sm font-semibold text-slate-950">Logic</span>
+        </div>
+        <div class="mt-6 space-y-4">
+          <div id="game5Grid" class="grid grid-cols-5 gap-3"></div>
+          <div class="flex flex-wrap items-center gap-3">
+            <button id="game5Start" class="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold 
+            text-slate-950 transition hover:bg-orange-400">Start</button>
+            <button id="game5Reset" class="rounded-full bg-slate-700 px-4 py-2 text-sm font-semibold text-slate-100 
+            transition hover:bg-slate-600">Reset</button>
+          </div>
+          <p id="game5Message" class="min-h-[2rem] text-sm text-slate-300"></p>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Homework 1: Don’t Click / Click NOW
+      const game1Button = document.querySelector('#game1Button');
+      const game1Start = document.querySelector('#game1Start');
+      const game1Reset = document.querySelector('#game1Reset');
+      const game1Message = document.querySelector('#game1Message');
+      let game1State = 'idle';
+      let game1StartTime = 0;
+      let game1Timeout = null;
+
+      function resetGame1() {
+        clearTimeout(game1Timeout);
+        game1State = 'idle';
+        game1Button.textContent = 'Don’t Click';
+        game1Button.disabled = true;
+        game1Message.textContent = 'Press Start to begin.';
+      }
+
+      function startGame1() {
+        resetGame1();
+        game1State = 'waiting';
+        game1Message.textContent = 'Wait for Click NOW...';
+        game1Timeout = setTimeout(() => {
+          game1State = 'ready';
+          game1Button.textContent = 'Click NOW';
+          game1Button.disabled = false;
+          game1StartTime = Date.now();
+          game1Message.textContent = 'Click as fast as possible!';
+        }, 1200 + Math.random() * 1800);
+      }
+
+      game1Button.addEventListener('click', () => {
+        if (game1State === 'waiting') {
+          game1Button.disabled = true;
+          game1Message.textContent = 'Too early! You lost.';
+          game1State = 'done';
+          clearTimeout(game1Timeout);
+          game1Button.textContent = 'Don’t Click';
+          return;
+        }
+        if (game1State === 'ready') {
+          const elapsed = Date.now() - game1StartTime;
+          game1Button.disabled = true;
+          game1Message.textContent = `Great! Your reaction time is ${elapsed} ms.`;
+          game1State = 'done';
+        }
+      });
+
+      game1Start.addEventListener('click', startGame1);
+      game1Reset.addEventListener('click', resetGame1);
+      resetGame1();
+
+      // Homework 2: Find the Correct Button
+      const game2Buttons = document.querySelector('#game2Buttons');
+      const game2Start = document.querySelector('#game2Start');
+      const game2Reset = document.querySelector('#game2Reset');
+      const game2Message = document.querySelector('#game2Message');
+      let game2CorrectIndex = 0;
+      let game2Started = false;
+      let game2Time = 0;
+
+      function updateGame2Buttons() {
+        Array.from(game2Buttons.children).forEach((button, index) => {
+          button.disabled = !game2Started;
+          button.className = `rounded-2xl px-4 py-3 text-sm font-semibold transition ${game2Started ? 'bg-slate-700 text-white hover:bg-slate-600' : 'bg-slate-800 text-slate-500'}`;
+          if (!game2Started && index === game2CorrectIndex) {
+            button.className += ' ring-2 ring-emerald-500'; 
+          }
+        });
+      }
+
+      function renderGame2Buttons() {
+        game2Buttons.innerHTML = '';
+        for (let i = 0; i < 5; i += 1) {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.textContent = `Button ${i + 1}`;
+          button.className = 'rounded-2xl bg-slate-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-60';
+          button.disabled = !game2Started;
+          button.addEventListener('click', () => {
+            if (!game2Started) return;
+            const elapsed = Date.now() - game2Time;
+            game2Started = false;
+            if (i === game2CorrectIndex) {
+              game2Message.textContent = `Correct! You found it in ${elapsed} ms.`;
+            } else {
+              game2Message.textContent = `Wrong button. The correct one was ${game2CorrectIndex + 1}.`;
+            }
+            updateGame2Buttons();
+          });
+          game2Buttons.append(button);
+        }
+      }
+
+      function startGame2() {
+        game2CorrectIndex = Math.floor(Math.random() * 5);
+        game2Started = true;
+        game2Time = Date.now();
+        game2Message.textContent = 'Choose the correct button before time runs away!';
+        updateGame2Buttons();
+      }
+
+      function resetGame2() {
+        game2Started = false;
+        game2Message.textContent = 'Press New round to start.';
+        renderGame2Buttons();
+        updateGame2Buttons();
+      }
+
+      game2Start.addEventListener('click', startGame2);
+      game2Reset.addEventListener('click', resetGame2);
+      resetGame2();
+
+      // Homework 3: Click Only on Green
+      const game3Panel = document.querySelector('#game3Panel');
+      const game3ColorLabel = document.querySelector('#game3ColorLabel');
+      const game3Button = document.querySelector('#game3Button');
+      const game3Start = document.querySelector('#game3Start');
+      const game3Stop = document.querySelector('#game3Stop');
+      const game3Message = document.querySelector('#game3Message');
+      const colors = ['red', 'green', 'blue'];
+      let game3Interval = null;
+      let game3Current = 'red';
+      let game3Correct = 0;
+      let game3Mistakes = 0;
+      let game3Active = false;
+
+      function updateGame3Panel() {
+        game3ColorLabel.textContent = `Current color: ${game3Current.toUpperCase()}`;
+        game3Panel.className = `rounded-3xl border border-slate-700 p-6 text-center text-xl font-semibold transition duration-300 ${
+          game3Current === 'red' ? 'bg-red-500/20 text-red-100' : game3Current === 'green' ? 'bg-emerald-500/20 text-emerald-100' : 'bg-blue-500/20 text-sky-100'
+        }`;
+      }
+
+      function game3Tick() {
+        game3Current = colors[Math.floor(Math.random() * colors.length)];
+        updateGame3Panel();
+      }
+
+      function startGame3() {
+        clearInterval(game3Interval);
+        game3Current = colors[Math.floor(Math.random() * colors.length)];
+        game3Correct = 0;
+        game3Mistakes = 0;
+        game3Active = true;
+        game3Button.disabled = false;
+        game3Message.textContent = 'Click only when green.';
+        updateGame3Panel();
+        game3Interval = setInterval(game3Tick, 900);
+      }
+
+      function stopGame3() {
+        clearInterval(game3Interval);
+        game3Active = false;
+        game3Button.disabled = true;
+        game3Message.textContent = `Finished! Correct: ${game3Correct}, Mistakes: ${game3Mistakes}.`;
+      }
+
+      game3Button.addEventListener('click', () => {
+        if (!game3Active) return;
+        if (game3Current === 'green') {
+          game3Correct += 1;
+          game3Message.textContent = `Nice! Correct clicks: ${game3Correct}.`;
+        } else {
+          game3Mistakes += 1;
+          game3Message.textContent = `Oops! Mistakes: ${game3Mistakes}.`;
+        }
+      });
+
+      game3Start.addEventListener('click', startGame3);
+      game3Stop.addEventListener('click', stopGame3);
+      stopGame3();
+
+      // Homework 4: Moving Button
+      const game4Arena = document.querySelector('#game4Arena');
+      const game4Button = document.querySelector('#game4Button');
+      const game4Start = document.querySelector('#game4Start');
+      const game4Reset = document.querySelector('#game4Reset');
+      const game4Message = document.querySelector('#game4Message');
+      let game4Active = false;
+      let game4Score = 0;
+      let game4Timer = null;
+
+      function positionGame4Button() {
+        const arenaRect = game4Arena.getBoundingClientRect();
+        const buttonRect = game4Button.getBoundingClientRect();
+        const maxLeft = arenaRect.width - buttonRect.width - 16;
+        const maxTop = arenaRect.height - buttonRect.height - 16;
+        const left = Math.max(0, Math.random() * maxLeft);
+        const top = Math.max(0, Math.random() * maxTop);
+        game4Button.style.left = `${left}px`;
+        game4Button.style.top = `${top}px`;
+      }
+
+      function startGame4() {
+        game4Score = 0;
+        game4Active = true;
+        game4Button.disabled = false;
+        positionGame4Button();
+        game4Message.textContent = 'Game started! Click as fast as you can.';
+        clearTimeout(game4Timer);
+        game4Timer = setTimeout(() => {
+          game4Active = false;
+          game4Button.disabled = true;
+          game4Message.textContent = `Time is up! You clicked ${game4Score} times.`;
+        }, 5000);
+      }
+
+      function resetGame4() {
+        game4Active = false;
+        game4Score = 0;
+        game4Button.disabled = true;
+        game4Message.textContent = 'Press Start to begin the moving button game.';
+        positionGame4Button();
+        clearTimeout(game4Timer);
+      }
+
+      game4Button.addEventListener('click', () => {
+        if (!game4Active) return;
+        game4Score += 1;
+        game4Message.textContent = `Score: ${game4Score}`;
+        positionGame4Button();
+      });
+
+      game4Start.addEventListener('click', startGame4);
+      game4Reset.addEventListener('click', resetGame4);
+      resetGame4();
+
+      // Homework 5: Click Numbers 1–10 in Order
+      const game5Grid = document.querySelector('#game5Grid');
+      const game5Start = document.querySelector('#game5Start');
+      const game5Reset = document.querySelector('#game5Reset');
+      const game5Message = document.querySelector('#game5Message');
+      let game5Order = [];
+      let game5Next = 1;
+      let game5Mistakes = 0;
+      let game5TimeStart = 0;
+      let game5Active = false;
+
+      function shuffle(array) {
+        return array
+          .map((value) => ({ value, sort: Math.random() }))
+          .sort((a, b) => a.sort - b.sort)
+          .map(({ value }) => value);
+      }
+
+      function renderGame5Grid() {
+        game5Grid.innerHTML = '';
+        game5Order.forEach((number) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.textContent = String(number);
+          button.className = 'rounded-2xl bg-slate-700 px-4 py-5 text-lg font-semibold text-white transition hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-60';
+          button.disabled = !game5Active;
+          button.addEventListener('click', () => {
+            if (!game5Active) return;
+            if (number === game5Next) {
+              button.disabled = true;
+              button.className = 'rounded-2xl bg-emerald-500 px-4 py-5 text-lg font-semibold text-slate-950';
+              game5Next += 1;
+              if (game5Next > 10) {
+                const elapsed = Date.now() - game5TimeStart;
+                game5Active = false;
+                game5Message.textContent = `Done! Time: ${elapsed} ms, Mistakes: ${game5Mistakes}.`;
+                Array.from(game5Grid.children).forEach((btn) => (btn.disabled = true));
+              } else {
+                game5Message.textContent = `Good! Next number: ${game5Next}.`;
+              }
+            } else {
+              game5Mistakes += 1;
+              game5Message.textContent = `Wrong number. Mistakes: ${game5Mistakes}.`;
+            }
+          });
+          game5Grid.append(button);
+        });
+      }
+
+      function startGame5() {
+        game5Order = shuffle(Array.from({ length: 10 }, (_, i) => i + 1));
+        game5Next = 1;
+        game5Mistakes = 0;
+        game5Active = true;
+        game5TimeStart = Date.now();
+        game5Message.textContent = 'Click number 1 first.';
+        renderGame5Grid();
+      }
+
+      function resetGame5() {
+        game5Active = false;
+        game5Order = shuffle(Array.from({ length: 10 }, (_, i) => i + 1));
+        game5Next = 1;
+        game5Mistakes = 0;
+        game5Message.textContent = 'Press Start to begin the number order game.';
+        renderGame5Grid();
+      }
+
+      game5Start.addEventListener('click', startGame5);
+      game5Reset.addEventListener('click', resetGame5);
+      resetGame5();
+    });
+  </script>
+</body>
+</html>

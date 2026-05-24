@@ -1,0 +1,127 @@
+<!-- 2.შექმენი თამაში სადაც ღილაკზე დაჭერის შემდეგ ეკრანზე ჩნდება სხვადასხვა ადგილას წრე, კვადრატი, სამკუთხედი 
+ მონაცვლეობით, მომხმარებელმა უნდა დააჭიროს რაც შეიძლება სწრაფად ნებისმიერ ობიექტს, დააჭერის შემდეგ გამოიტანე საშუალო დრო -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Reaction Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-100 flex items-center justify-center p-4">
+    <div class="w-full max-w-3xl rounded-3xl bg-white shadow-2xl p-8">
+        <div class="mb-8 text-center">
+            <h1 class="text-4xl font-bold text-slate-900">Shape Click Game</h1>
+            <p class="mt-3 text-slate-600">Click the shape as quickly as possible. After 3 clicks, 
+                your average reaction time appears.</p>
+        </div>
+
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+            <button id="startButton" class="w-full md:w-auto px-6 py-3 rounded-2xl bg-sky-600 text-white 
+            text-lg font-semibold hover:bg-sky-700 transition">Start Game</button>
+            <div class="space-y-2 text-center md:text-left">
+                <p id="message" class="text-xl text-slate-800">Press Start to begin.</p>
+                <p id="result" class="text-slate-500"></p>
+            </div>
+        </div>
+
+        <div id="gameArea" class="relative h-[420px] rounded-3xl bg-slate-50 border border-slate-200 overflow-hidden hidden">
+            <div id="shape" class="absolute cursor-pointer"></div>
+        </div>
+    </div>
+
+    <script>
+        const startButton = document.getElementById('startButton');
+        const message = document.getElementById('message');
+        const result = document.getElementById('result');
+        const gameArea = document.getElementById('gameArea');
+        const shape = document.getElementById('shape');
+
+        const shapes = ['circle', 'square', 'triangle'];
+        let currentIndex = 0;
+        let clickCount = 0;
+        let totalTime = 0;
+        let startTime = 0;
+        let gameActive = false;
+
+        function getRandomPosition(size) {
+            const areaRect = gameArea.getBoundingClientRect();
+            const x = Math.random() * (areaRect.width - size);
+            const y = Math.random() * (areaRect.height - size);
+            return { x, y };
+        }
+
+        function updateShape() {
+            const shapeType = shapes[currentIndex % shapes.length];
+            const size = 100;
+            const { x, y } = getRandomPosition(size);
+
+            shape.style.width = `${size}px`;
+            shape.style.height = `${size}px`;
+            shape.style.left = `${x}px`;
+            shape.style.top = `${y}px`;
+            shape.style.transition = 'all 0.2s ease';
+
+            if (shapeType === 'circle') {
+                shape.style.borderRadius = '9999px';
+                shape.style.background = '#0ea5e9';
+                shape.style.clipPath = 'none';
+            } else if (shapeType === 'square') {
+                shape.style.borderRadius = '24px';
+                shape.style.background = '#22c55e';
+                shape.style.clipPath = 'none';
+            } else if (shapeType === 'triangle') {
+                shape.style.borderRadius = '0';
+                shape.style.background = 'transparent';
+                shape.style.borderLeft = '50px solid transparent';
+                shape.style.borderRight = '50px solid transparent';
+                shape.style.borderBottom = '100px solid #f97316';
+                shape.style.width = '0';
+                shape.style.height = '0';
+            }
+
+            currentIndex += 1;
+            startTime = performance.now();
+        }
+
+        function startGame() {
+            clickCount = 0;
+            totalTime = 0;
+            currentIndex = 0;
+            gameActive = true;
+            gameArea.classList.remove('hidden');
+            startButton.textContent = 'Restart Game';
+            message.textContent = 'Click the shape as fast as you can.';
+            result.textContent = '';
+            shape.style.border = 'none';
+            if (shape.style.clipPath === 'none') {
+                shape.style.borderLeft = '';
+                shape.style.borderRight = '';
+                shape.style.borderBottom = '';
+            }
+            updateShape();
+        }
+
+        function onShapeClick() {
+            if (!gameActive) return;
+            const reactionTime = Math.round(performance.now() - startTime);
+            totalTime += reactionTime;
+            clickCount += 1;
+            result.textContent = `Click ${clickCount}/3: ${reactionTime} ms`;
+
+            if (clickCount >= 3) {
+                const average = Math.round(totalTime / clickCount);
+                message.textContent = `Finished! Your average reaction time is ${average} ms.`;
+                gameActive = false;
+                return;
+            }
+
+            updateShape();
+        }
+
+        startButton.addEventListener('click', startGame);
+        shape.addEventListener('click', onShapeClick);
+    </script>
+</body>
+</html>

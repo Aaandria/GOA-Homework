@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 p-6"x>
+    <div class="rounded-3xl border border-slate-800 bg-slate-900/80 p-6 shadow-xl shadow-slate-900/50 xl:col-span-2">
+        <div class="flex items-center justify-between gap-4">
+          <div>
+            <h2 class="text-2xl font-semibold text-white">Game 5: Click Numbers 1–10 in Order</h2>
+            <p class="mt-2 text-sm text-slate-400">Click the numbers in the correct order as quickly as possible.</p>
+          </div>
+          <span class="rounded-full bg-orange-500 px-3 py-1 text-sm font-semibold text-slate-950">Logic</span>
+        </div>
+        <div class="mt-6 space-y-4">
+          <div id="game5Grid" class="grid grid-cols-5 gap-3"></div>
+          <div class="flex flex-wrap items-center gap-3">
+            <button id="game5Start" class="rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold 
+            text-slate-950 transition hover:bg-orange-400">Start</button>
+            <button id="game5Reset" class="rounded-full bg-slate-700 px-4 py-2 text-sm font-semibold text-slate-100 
+            transition hover:bg-slate-600">Reset</button>
+          </div>
+          <p id="game5Message" class="min-h-[2rem] text-sm text-slate-300"></p>
+        </div>
+    </div>
+    <script>
+        const game5Grid = document.querySelector('#game5Grid');
+      const game5Start = document.querySelector('#game5Start');
+      const game5Reset = document.querySelector('#game5Reset');
+      const game5Message = document.querySelector('#game5Message');
+      let game5Order = [];
+      let game5Next = 1;
+      let game5Mistakes = 0;
+      let game5TimeStart = 0;
+      let game5Active = false;
+
+      function shuffle(array) {
+        return array
+          .map((value) => ({ value, sort: Math.random() }))
+          .sort((a, b) => a.sort - b.sort)
+          .map(({ value }) => value);
+      }
+
+      function renderGame5Grid() {
+        game5Grid.innerHTML = '';
+        game5Order.forEach((number) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.textContent = String(number);
+          button.className = 'rounded-2xl bg-slate-700 px-4 py-5 text-lg font-semibold text-white transition hover:bg-slate-600 disabled:cursor-not-allowed disabled:opacity-60';
+          button.disabled = !game5Active;
+          button.addEventListener('click', () => {
+            if (!game5Active) return;
+            if (number === game5Next) {
+              button.disabled = true;
+              button.className = 'rounded-2xl bg-emerald-500 px-4 py-5 text-lg font-semibold text-slate-950';
+              game5Next += 1;
+              if (game5Next > 10) {
+                const endTime = Date.now() - game5TimeStart;
+                game5Active = false;
+                game5Message.textContent = `Done! Time: ${endTime} ms, Mistakes: ${game5Mistakes}.`;
+                Array.from(game5Grid.children).forEach((btn) => (btn.disabled = true));
+              } else {
+                game5Message.textContent = `Good! Next number: ${game5Next}.`;
+              }
+            } else {
+              game5Mistakes += 1;
+              game5Message.textContent = `Wrong number. Mistakes: ${game5Mistakes}.`;
+            }
+          });
+          game5Grid.append(button);
+        });
+      }
+
+      function startGame5() {
+        game5Order = shuffle(Array.from({ length: 10 }, (_, i) => i + 1));
+        game5Next = 1;
+        game5Mistakes = 0;
+        game5Active = true;
+        game5TimeStart = Date.now();
+        game5Message.textContent = 'Click number 1 first.';
+        renderGame5Grid();
+      }
+
+      function resetGame5() {
+        game5Active = false;
+        game5Order = shuffle(Array.from({ length: 10 }, (_, i) => i + 1));
+        game5Next = 1;
+        game5Mistakes = 0;
+        game5Message.textContent = 'Press Start to begin the number order game.';
+        renderGame5Grid();
+      }
+
+      game5Start.addEventListener('click', startGame5);
+      game5Reset.addEventListener('click', resetGame5);
+      resetGame5();
+    </script>
+</body>
+</html>
