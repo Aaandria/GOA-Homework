@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f4f7fb;
+      }
+
+      h1 {
+        margin-bottom: 1rem;
+      }
+
+      button {
+        padding: 0.7rem 1.2rem;
+        border: none;
+        border-radius: 8px;
+        background: #2563eb;
+        color: white;
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      button:hover {
+        background: #1d4ed8;
+      }
+
+      #productsContainer {
+        margin-top: 1.5rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+      }
+
+      .product-card {
+        background: white;
+        border-radius: 10px;
+        padding: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      .product-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: contain;
+        margin-bottom: 0.8rem;
+      }
+
+      .product-card h3 {
+        font-size: 1rem;
+        margin: 0 0 0.5rem;
+      }
+
+      .product-card p {
+        font-size: 0.9rem;
+        color: #555;
+      }
+
+      .product-card strong {
+        color: #111827;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Products</h1>
+    <button id="loadProductsBtn">Load products</button>
+    <div id="productsContainer"></div>
+
+    <!-- Cart (fixed bottom) -->
+    <aside id="cart" style="display:flex;position:fixed;left:12px;right:12px;bottom:12px;background:#fff;border-radius:10px;padding:10px;box-shadow:0 8px 24px rgba(2,6,23,0.08);align-items:center;justify-content:space-between;gap:12px;">
+      <div>
+        <strong>Cart:</strong>
+        <ul id="cartItems" style="display:inline-flex;gap:8px;list-style:none;padding:0;margin:0 8px;vertical-align:middle;"></ul>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px">
+        <div><strong>Sum:</strong> <span id="cartSum">0.00</span> $</div>
+        <button id="buyNowBtn">Buy now</button>
+      </div>
+    </aside>
+
+    <script src="homework3.js"></script>
+  </body>
+</html>
