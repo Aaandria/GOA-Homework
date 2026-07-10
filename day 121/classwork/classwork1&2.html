@@ -1,0 +1,26 @@
+<!-- 1) შექმენი div#parent, რომლის შიგნით იქნება button#child. ორივეს დაუმატე click ივენთი. როდესაც ღილაკზე დააჭერ,
+ კონსოლში ჯერ გამოიტანე "Child clicked", შემდეგ "Parent clicked". კომენტარებში ახსენი, 
+ რატომ შესრულდა ორივე click და რა არის Event Bubbling. -->
+
+<!-- 2) იგივე HTML გამოიყენე (parent და child). ამჯერად child-ის click ივენთში გამოიყენე event.stopPropagation(). 
+ღილაკზე დაჭერისას უნდა გამოჩნდეს მხოლოდ "Child clicked", ხოლო parent-ის click აღარ უნდა შესრულდეს.
+ კომენტარებში ახსენი, რას აკეთებს stopPropagation() და როდის შეიძლება მისი გამოყენება. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        PARENT
+        <button id="child">Click Me</button>
+    </div>
+
+    <script src="classwork1&2.js"></script>
+</body>
+</html>

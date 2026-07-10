@@ -1,0 +1,32 @@
+<!-- 1) იგივე HTML გამოიყენე (parent და child). child-ის click ივენთში გამოიყენე event.stopPropagation(). 
+ღილაკზე დაჭერისას უნდა გამოჩნდეს მხოლოდ "Child clicked". კომენტარებში ახსენი, რას აკეთებს stopPropagation(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">parent
+        <button id="child">child</button>
+    </div>
+
+    <script>
+        const child = document.getElementById("child")
+        const parent = document.getElementById("parent")
+
+        child.addEventListener("click", (event) => {
+            console.log("child clicked")
+            event.stopPropagation()
+        })
+
+        parent.addEventListener("click", () => {
+        console.log("parent clicked")
+        })
+
+        // stopPropagation() აჩერებს  event bubling-ს
+    </script>
+</body>
+</html>

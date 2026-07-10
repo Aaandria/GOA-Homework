@@ -1,0 +1,40 @@
+<!-- 2) შექმენი სამი ელემენტი: div#outer -> div#middle -> button#inner. სამივეს დაუმატე click ივენთი.
+e.stopPropagation() დაუწერე როგორც button#inner-ს, ასევე div#middle-ს.
+დააჭირე button#inner-ს. კომენტარებში ახსენი, რეალურად რომელმა stopPropagation()-მა შეასრულა თავისი 
+საქმე და რატომ ვერ მიაღწია ივენთმა div#outer-მდე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outer">outer
+        <div id="middle">middle
+            <button id="inner">inner</button>
+        </div>
+    </div>
+
+    <script>
+        const outer = document.getElementById("outer")
+        const middle = document.getElementById("middle")
+        const inner = document.getElementById("inner")
+
+        outer.addEventListener("click", () => {
+            console.log("outer clicked")
+        })
+        middle.addEventListener("click", (event) => {
+            console.log("middle clicked")
+            event.stopPropagation()
+        })
+        inner.addEventListener("click", (event) => {
+            console.log("inner clicked")
+            event.stopPropagation()
+        })
+
+        //შესრულდა მხოლოდ inner-ი რადგან stopPropafation-მა გააჩერა event bubling-ი და middle-ი  და outer-ი აღარ შესრულდა
+    </script>
+</body>
+</html>

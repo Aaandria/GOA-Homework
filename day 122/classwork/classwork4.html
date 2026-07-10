@@ -1,0 +1,46 @@
+<!-- 4) გამოიყენე ზუსტად წინა დავალების HTML.
+ამჯერად div#grandparent-ის click ივენთში ჩაწერე event.stopPropagation().
+დააჭირე ისევ button#child-ს. კომენტარებში ახსენი, ზუსტად რომელი ელემენტების ივენთები გაეშვა, 
+რომლებმაც ვეღარ მოასწრეს გაშვება და რატომ მოხდა ასე. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="great-grandparent">great-grandparent
+        <div id="grandparent">grandparent
+            <div id="parent">parent
+                <button id="child">child</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        const greatGrandparent = document.getElementById("great-grandparent")
+        const grandparent = document.getElementById("grandparent")
+        const parent = document.getElementById("parent")
+        const child = document.getElementById("child")
+
+        greatGrandparent.addEventListener("click", () => {
+            console.log("great-grandparent clicked")
+        })
+        grandparent.addEventListener("click", (event) => {
+            event.stopPropagation()
+            console.log("grandparent clicked")
+        })
+        parent.addEventListener("click", () => {
+            console.log("parent clicked")
+        })
+        child.addEventListener("click", () => {
+            console.log("child clicked")
+        })
+
+        //კონსოლში დაიბეჭდა შემდეგი მესიჯები: "child clicked", "parent clicked", "grandparent clicked"
+        //რადგან event bubbling-ი ავიდა ზემოთ grandparent-მდე და grandparent-ის click ივენთში ჩაწერილი 
+        // stopPropagation() აჩერებს event bubbling-ს და great-grandparent-ის click ივენთი ვეღარ შესრულდა
+    </script>
+</body>
+</html>
